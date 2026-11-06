@@ -1,0 +1,37 @@
+node_modules
+/.svelte-kit
+/build
+/dist
+/.output
+/.vercel
+/.netlify
+/.wrangler
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Environment and secrets (strictly excluded)
+.env
+.env.*
+*.env
+*.local
+*.pem
+*.key
+*.cert
+*.token
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

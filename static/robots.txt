@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sagnikbehera.pages.dev/sitemap.xml
