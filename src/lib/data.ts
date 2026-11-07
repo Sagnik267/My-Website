@@ -126,14 +126,11 @@ export const marqueeSkills: readonly string[] = [
 	'Python',
 	'SQL',
 	'MySQL',
-	'Flask',
 	'Power BI',
 	'DAX',
 	'Google Colab',
 	'Jupyter',
-	'Data Analytics',
-	'ETL',
-	'KPI Tracking'
+	'Data Analytics'
 ];
 
 /**
@@ -186,7 +183,7 @@ export const projects: readonly ProjectItem[] = [
 		name: 'Marketing Performance Dashboard',
 		description:
 			'Data analytics dashboard tracking, analyzing, and visualizing marketing campaign performance across channels with <b>CTR</b>, <b>conversion rates</b>, and <b>ROI insights</b>.',
-		tags: ['Python', 'SQL', 'Data Analytics', 'Dashboards', 'KPI Tracking'],
+		tags: ['Python', 'SQL', 'Data Analytics', 'Dashboards'],
 		repoUrl: 'https://github.com/Sagnik267'
 	},
 	{
@@ -195,7 +192,7 @@ export const projects: readonly ProjectItem[] = [
 		name: 'Marketing Campaign Analysis',
 		description:
 			'Power BI analytical model with custom <b>DAX measures</b> (Total Purchase, Target Response, Campaign Profit, Percentage Success) evaluating customer response and revenue effectiveness.',
-		tags: ['Power BI Desktop', 'DAX', 'MySQL', 'Data Preprocessing', 'ETL'],
+		tags: ['Power BI Desktop', 'DAX', 'MySQL', 'Data Preprocessing'],
 		repoUrl: 'https://github.com/Sagnik267'
 	}
 ];
@@ -213,7 +210,7 @@ export const education: readonly EducationItem[] = [
 		logoText: 'CVR',
 		details: [
 			'Focus on Machine Learning, Database Management Systems (MySQL), and Statistical Data Analysis.',
-			'Hands-on practical development with Python, Flask, SQL, and Power BI Desktop.'
+			'Hands-on practical development with Python, SQL, and Power BI Desktop.'
 		]
 	},
 	{

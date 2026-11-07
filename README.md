@@ -32,7 +32,7 @@ Built with **SvelteKit** and `@sveltejs/adapter-static` for fully static pre-ren
    - Buttons: *"See the work ↘"* (scrolls to Projects) and *"Résumé.pdf ↓"* (downloads `/assets/Sagnik_resume.pdf`)
    - Monospace social badges: GitHub, LinkedIn, Website, and Direct Email
 3. **Infinite Horizontal Tech Marquee:**
-   - Looped strip of skills (*Python, SQL, MySQL, Flask, Power BI, DAX, Google Colab, Jupyter, Data Analytics, ETL, KPI Tracking*) separated by `◆`
+   - Looped strip of skills (*Python, SQL, MySQL, Power BI, DAX, Google Colab, Jupyter, Data Analytics*) separated by `◆`
    - Pauses on hover; respects `prefers-reduced-motion`
 4. **"00 / Work" — Experience:**
    - Collapsible cards with `+` / `−` accordion expand
