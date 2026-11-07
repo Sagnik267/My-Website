@@ -101,3 +101,4 @@ def generate_og_image(output_path):
 
 if __name__ == '__main__':
     generate_og_image('static/og.png')
+

@@ -7,7 +7,7 @@
 
 	let { children }: LayoutProps = $props();
 
-	const pageTitle = `${siteMeta.name} | Data Science Student & Portfolio`;
+	const pageTitle = `${siteMeta.brandName} · ${siteMeta.name}`;
 	const pageDescription = `${siteMeta.tagline}. B.Tech Computer Science Engineering student specializing in Python, SQL, MySQL, and Power BI Desktop.`;
 	const ogImageUrl = `${siteMeta.canonicalUrl}og.png`;
 </script>
@@ -16,7 +16,7 @@
 	<title>{pageTitle}</title>
 	<meta name="description" content={pageDescription} />
 	<meta name="author" content={siteMeta.name} />
-	<meta name="theme-color" content="#0a0f1d" />
+	<meta name="theme-color" content="#5b7cff" />
 	<link rel="canonical" href={siteMeta.canonicalUrl} />
 
 	<!-- Open Graph / Facebook -->
@@ -27,7 +27,7 @@
 	<meta property="og:image" content={ogImageUrl} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Sagnik Behera Portfolio Preview Card" />
+	<meta property="og:image:alt" content="Sagnik Behera Portfolio Preview" />
 	<meta property="og:locale" content="en_US" />
 
 	<!-- Twitter -->
@@ -36,7 +36,7 @@
 	<meta name="twitter:title" content={pageTitle} />
 	<meta name="twitter:description" content={pageDescription} />
 	<meta name="twitter:image" content={ogImageUrl} />
-	<meta name="twitter:image:alt" content="Sagnik Behera Portfolio Preview Card" />
+	<meta name="twitter:image:alt" content="Sagnik Behera Portfolio Preview" />
 
 	<!-- Favicons & Web Manifest -->
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -45,7 +45,7 @@
 	<link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#top" class="skip-link">Skip to main content</a>
 
 <Navbar />
 

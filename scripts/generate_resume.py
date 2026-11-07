@@ -200,3 +200,4 @@ def create_resume_pdf(output_path):
 
 if __name__ == '__main__':
     create_resume_pdf('static/assets/Sagnik_resume.pdf')
+

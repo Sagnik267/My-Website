@@ -32,3 +32,4 @@ This website is architected with defense-in-depth principles:
 - **Scraper-Resistant Contact:** Email addresses are not exposed in plaintext in raw HTML files; mailto actions are dynamically assembled client-side.
 - **Self-Hosted Assets:** Zero external CDNs, trackers, third-party analytics, or dynamic iframes. Fonts and assets are strictly self-hosted.
 - **Automated CI Audits:** Dependabot scans dependencies weekly, and GitHub Actions CI enforces `npm audit --audit-level=high` on every commit and pull request.
+

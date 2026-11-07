@@ -1,84 +1,193 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { siteMeta, getMailtoLink, getEmail } from '#lib';
+	import { siteMeta, getEmail, getMailtoLink } from '#lib';
 
-	let mailtoUrl = $state('');
-	let emailDisplay = $state('');
+	let mailtoLink = $state('#');
+	let displayEmail = $state('sagnikbehera30 [at] gmail [dot] com');
 
 	onMount(() => {
-		// Construct mailto and email string dynamically client-side
-		mailtoUrl = getMailtoLink();
-		emailDisplay = getEmail();
+		mailtoLink = getMailtoLink();
+		displayEmail = getEmail();
 	});
 </script>
 
-<section id="contact" class="section-wrapper" aria-labelledby="contact-heading">
-	<div class="container">
+<section class="sec-contact" id="contact">
+	<div class="wrap">
 		<div class="contact-card">
-			<div class="section-tag">Direct Communication</div>
-			<h2 id="contact-heading" class="contact-headline">Let's Connect</h2>
-			<p class="contact-subtext">
-				Whether you have an inquiry about my data analytics capstone projects, model development, or collaboration opportunities, feel free to reach out directly.
-			</p>
+			<span class="tag ctag">03 / Contact</span>
 
-			<div class="contact-actions">
-				{#if mailtoUrl}
-					<a href={mailtoUrl} class="btn btn-primary" aria-label="Send an Email to Sagnik Behera">
-						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-							<polyline points="22,6 12,13 2,6"></polyline>
-						</svg>
-						<span>Send an Email</span>
-					</a>
-					<p class="ticker-item" aria-label="Direct Email Address">
-						<span class="ticker-dot" aria-hidden="true">•</span>
-						<span>{emailDisplay}</span>
-					</p>
-				{/if}
+			<h2 class="contact-title">
+				Let's build<br />
+				<em>something</em> cool
+			</h2>
 
-				<noscript>
-					<div class="noscript-fallback">
-						<p>
-							JavaScript is disabled. <a href={siteMeta.linkedinUrl} target="_blank" rel="noopener noreferrer">Find me on LinkedIn</a>
-						</p>
-					</div>
-				</noscript>
-			</div>
+			<a
+				href={mailtoLink}
+				class="contact-mail"
+				aria-label="Send an email to Sagnik Behera"
+			>
+				<span class="mail-ico">✉</span>
+				<span class="mail-text">{displayEmail}</span>
+			</a>
 
-			<div class="contact-links-group" aria-label="Social Profiles">
-				<a
-					href={siteMeta.linkedinUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn btn-secondary"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-						<rect x="2" y="9" width="4" height="12"></rect>
-						<circle cx="4" cy="4" r="2"></circle>
-					</svg>
-					<span>LinkedIn Profile</span>
-				</a>
-
+			<div class="contact-socials">
 				<a
 					href={siteMeta.githubUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn btn-secondary"
+					class="social-link"
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-						<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-					</svg>
-					<span>GitHub Profile</span>
+					GITHUB <span class="arr">↗</span>
 				</a>
-			</div>
 
-			<div class="security-notice-box" role="note">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-					<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-				</svg>
-				<span>Static Site Architecture: Zero backend APIs, zero forms, and zero tracking cookies.</span>
+				<a
+					href={siteMeta.linkedinUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="social-link"
+				>
+					LINKEDIN <span class="arr">↗</span>
+				</a>
+
+				<a
+					href={siteMeta.resumeUrl}
+					download
+					target="_blank"
+					rel="noopener noreferrer"
+					class="social-link"
+				>
+					RÉSUMÉ <span class="arr">↓</span>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
+
+<style>
+	.sec-contact {
+		padding: 70px 0 30px;
+	}
+
+	.contact-card {
+		border: var(--border-thick);
+		background: var(--ink);
+		color: var(--paper);
+		box-shadow: var(--shadow-lg);
+		text-align: center;
+		padding: clamp(48px, 8vw, 86px) 24px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.ctag {
+		color: var(--green);
+		font-size: 13px;
+		letter-spacing: 0.16em;
+	}
+
+	.contact-title {
+		font-family: var(--font-display);
+		font-size: clamp(38px, 8.5vw, 106px);
+		font-weight: 700;
+		line-height: 0.94;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		margin: 20px 0 16px;
+	}
+
+	.contact-title em {
+		display: inline-block;
+		font-style: normal;
+		-webkit-text-stroke: 2px var(--paper);
+		color: transparent;
+	}
+
+	.contact-mail {
+		font-family: var(--font-mono);
+		font-size: clamp(16px, 2.5vw, 24px);
+		font-weight: 700;
+		color: var(--paper);
+		border: 3px solid var(--paper);
+		box-shadow: 6px 6px 0 var(--green);
+		background: transparent;
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		margin-top: 28px;
+		padding: 16px 32px;
+		text-decoration: none;
+		transition: transform 0.15s var(--ease), background 0.2s var(--ease), box-shadow 0.15s var(--ease), color 0.2s var(--ease);
+	}
+
+	.contact-mail:hover {
+		background: var(--green);
+		border-color: var(--green);
+		color: var(--paper);
+		box-shadow: 9px 9px 0 var(--paper);
+		transform: translate(-3px, -3px);
+	}
+
+	.mail-ico {
+		font-size: 1.1em;
+	}
+
+	.contact-socials {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 14px;
+		margin-top: 38px;
+	}
+
+	.social-link {
+		font-family: var(--font-mono);
+		font-size: 13px;
+		font-weight: 700;
+		border: 3px solid var(--paper);
+		color: var(--paper);
+		padding: 12px 22px;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		transition: all 0.15s var(--ease);
+	}
+
+	.social-link:hover {
+		background: var(--blue);
+		border-color: var(--blue);
+		color: var(--paper);
+		transform: translate(-2px, -2px);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.arr {
+		transition: transform 0.2s var(--ease);
+	}
+
+	.social-link:hover .arr {
+		transform: translate(2px, -2px);
+	}
+
+	@media (max-width: 768px) {
+		.contact-card {
+			padding: 40px 18px;
+		}
+
+		.contact-mail {
+			padding: 12px 20px;
+			font-size: 15px;
+			width: 100%;
+			justify-content: center;
+			word-break: break-all;
+		}
+
+		.contact-socials {
+			flex-direction: column;
+		}
+
+		.social-link {
+			justify-content: center;
+		}
+	}
+</style>
