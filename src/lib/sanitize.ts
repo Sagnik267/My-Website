@@ -15,3 +15,4 @@ export function sanitizeHtml(dirty: string): string {
 		ALLOW_DATA_ATTR: false
 	});
 }
+

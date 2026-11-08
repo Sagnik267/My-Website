@@ -1,5 +1,5 @@
 Contact: mailto:sagnikbehera30@gmail.com
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://sagnikbehera.pages.dev/.well-known/security.txt
+Canonical: https://my-website-nu-snowy-55.vercel.app/.well-known/security.txt
 Policy: https://github.com/Sagnik267/My-Website/blob/main/SECURITY.md

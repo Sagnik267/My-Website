@@ -216,3 +216,4 @@ Please review and complete the following operational security recommendations in
 1. **Keep Dependencies Minimal:** This project maintains only 5 production dependencies (`isomorphic-dompurify`) and core devDependencies. Avoid adding unvetted third-party UI component libraries or heavy runtime dependencies.
 2. **Never Add Inline Scripts:** The strict Content Security Policy (`script-src 'self' 'sha256-...'`) will intentionally block any `<script>` tags injected without matching SHA-256 hashes.
 3. **Preserve Static Architecture:** Keep contact interactions routed through direct mailto and LinkedIn to maintain zero server-side attack surface.
+

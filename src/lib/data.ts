@@ -58,11 +58,11 @@ export const siteMeta = {
 	about:
 		'B.Tech Computer Science Engineering (Data Science) student with hands-on experience in database management using MySQL, along with Python and SQL. Comfortable with data preprocessing, exploratory data analysis and model development, and with deploying basic data-driven functionality in Python. Follows clean coding practices and keeps improving through practical projects.',
 	resumeUrl: '/assets/Sagnik_resume.pdf',
-	canonicalUrl: 'https://sagnikbehera.pages.dev/',
+	canonicalUrl: 'https://my-website-nu-snowy-55.vercel.app/',
 	githubUrl: 'https://github.com/Sagnik267',
 	githubHandle: 'Sagnik267',
 	linkedinUrl: 'https://www.linkedin.com/in/sagnik-behera-328b60435',
-	websiteUrl: 'https://sagnikbehera.pages.dev/',
+	websiteUrl: 'https://my-website-nu-snowy-55.vercel.app/',
 	ogImage: '/og.png'
 } as const;
 
