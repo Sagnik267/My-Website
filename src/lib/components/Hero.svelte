@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { siteMeta, getMailtoLink, getEmail } from '#lib';
+	import { siteMeta, getMailtoLink, getEmail, sanitizeHtml } from '#lib';
 
 	let mailtoHref = $state('#contact');
 	let emailAddress = $state('sagnikbehera30 [at] gmail [dot] com');
@@ -39,7 +39,7 @@
 		<!-- Tagline & Actions -->
 		<div class="hero-sub">
 			<p class="hero-lead">
-				{@html siteMeta.headline}
+				{@html sanitizeHtml(siteMeta.headline)}
 			</p>
 
 			<div class="hero-actions">

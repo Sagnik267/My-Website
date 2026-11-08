@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { experiences, computeDuration } from '#lib';
+	import { experiences, computeDuration, sanitizeHtml } from '#lib';
 
 	// Keep track of which cards are expanded. By default, open the first card.
 	let expandedState = $state<Record<string, boolean>>({
@@ -73,7 +73,7 @@
 							<ul class="bullets">
 								{#each exp.bullets as bullet}
 									<li class="bullet-item">
-										{@html bullet}
+										{@html sanitizeHtml(bullet)}
 									</li>
 								{/each}
 							</ul>

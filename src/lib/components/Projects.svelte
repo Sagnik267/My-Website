@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { projects } from '#lib';
+	import { projects, sanitizeHtml } from '#lib';
 </script>
 
 <section id="projects" class="sec-projects">
@@ -27,7 +27,7 @@
 					<div class="pc-body">
 						<h3 class="pc-title">{proj.name}</h3>
 						<p class="pc-desc">
-							{@html proj.description}
+							{@html sanitizeHtml(proj.description)}
 						</p>
 
 						<!-- Tech Chips -->
