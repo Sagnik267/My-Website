@@ -1,4 +1,9 @@
+# Dependencies
 node_modules
+/.pnp
+.pnp.js
+
+# Build and output artifacts
 /.svelte-kit
 /build
 /dist
@@ -7,16 +12,19 @@ node_modules
 /.netlify
 /.wrangler
 
-# OS and IDE
+# OS and IDE files
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
+*~
+*.bak
+*.tmp
 .idea/
 .vscode/*
 !.vscode/extensions.json
 
-# Environment and secrets (strictly excluded)
+# Environment variables, credentials, and secrets (strictly excluded)
 .env
 .env.*
 *.env
@@ -25,15 +33,15 @@ Thumbs.db
 *.key
 *.cert
 *.token
+*.p12
+*.pfx
 
-# Logs and debug
+# Logs and debug artifacts
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Vite
+# Vite timestamp caches
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-.vercel
