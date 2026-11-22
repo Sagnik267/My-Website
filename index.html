@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="night">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>sagnik.dev · Sagnik Behera</title>
-  <meta name="description" content="Data Science student turning raw data into clear business insights. B.Tech Computer Science Engineering student specializing in Python, SQL, MySQL, and Power BI Desktop." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sagnik Behera · Data Science Student</title>
+  <meta name="description" content="Portfolio of Sagnik Behera, a Data Science student turning raw data into clear business insights. Specialized in Python, SQL, Power BI, and DAX." />
   <meta name="author" content="Sagnik Behera" />
-  <meta name="theme-color" content="#e6edf1" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0f1626" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#040f24" id="meta-theme-color" />
   <link rel="canonical" href="https://my-website-nu-snowy-55.vercel.app/" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website-nu-snowy-55.vercel.app/" />
-  <meta property="og:title" content="sagnik.dev · Sagnik Behera" />
-  <meta property="og:description" content="Data Science student turning raw data into clear business insights. B.Tech Computer Science Engineering student specializing in Python, SQL, MySQL, and Power BI Desktop." />
+  <meta property="og:title" content="Sagnik Behera · Data Science Student" />
+  <meta property="og:description" content="Data science student turning raw data into clear business insights." />
   <meta property="og:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Sagnik Behera Portfolio Preview" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://my-website-nu-snowy-55.vercel.app/" />
-  <meta name="twitter:title" content="sagnik.dev · Sagnik Behera" />
-  <meta name="twitter:description" content="Data Science student turning raw data into clear business insights. B.Tech Computer Science Engineering student specializing in Python, SQL, MySQL, and Power BI Desktop." />
+  <meta name="twitter:title" content="Sagnik Behera · Data Science Student" />
+  <meta name="twitter:description" content="Data science student turning raw data into clear business insights." />
   <meta name="twitter:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
-  <meta name="twitter:image:alt" content="Sagnik Behera Portfolio Preview" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -35,42 +28,72 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Google Fonts: Bricolage Grotesque & Newsreader -->
+  <!-- Google Fonts: Unbounded (500), Inter (400, 500, 600), JetBrains Mono (400, 500) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@500&display=swap" rel="stylesheet" />
 
   <style>
-    /* DESIGN TOKENS */
+    /* CSS VARIABLES: Blue Planet Theme Tokens */
     :root {
-      --bg: #e6edf1;
-      --grid: #c5d1da;
-      --panel: #f5f8fa;
-      --ink: #13203a;
-      --muted: #5a6a82;
-      --ultramarine: #3a49ff;
-      --coral: #ff5d73;
-      --amber: #f2a900;
-
-      --font-heading: 'Bricolage Grotesque', 'Arial Narrow', sans-serif;
-      --font-body: 'Newsreader', Georgia, serif;
-      --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+      --font-heading: 'Unbounded', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1626;
-        --panel: #172036;
-        --ink: #e8eef8;
-        --grid: #27324b;
-        --muted: #94a3b8;
-        --ultramarine: #7d89ff;
-        --coral: #ff7a8d;
-        --amber: #ffc233;
-      }
+    /* Night (default) */
+    html[data-theme="night"] {
+      --bg: #040f24;
+      --bg-rgb: 4, 15, 36;
+      --ink: #e6f3ff;
+      --muted: #86a6c6;
+      --accent: #3ea6ff;
+      --aqua: #7cf3e0;
+      --green: #5ad38a;
+      --card: #0a1f42;
+      --line: rgba(62, 166, 255, 0.3);
+      --glow: rgba(62, 166, 255, 0.4);
+      --ring-border: rgba(124, 243, 224, 0.42);
+      --orbit-border: rgba(62, 166, 255, 0.28);
+      --nav-bg: rgba(4, 15, 36, 0.85);
+      --chip-bg: rgba(10, 31, 66, 0.8);
+      --dax-bg: rgba(90, 211, 138, 0.12);
+      --dax-border: rgba(90, 211, 138, 0.35);
+      --dax-text: #7cf3e0;
+      --star-field:
+        radial-gradient(1px 1px at 14% 12%, rgba(230,243,255,0.7) 1px, transparent 1px),
+        radial-gradient(1.5px 1.5px at 36% 24%, rgba(124,243,224,0.65) 1px, transparent 1px),
+        radial-gradient(1px 1px at 68% 16%, rgba(230,243,255,0.8) 1px, transparent 1px),
+        radial-gradient(1px 1px at 86% 38%, rgba(62,166,255,0.7) 1px, transparent 1px),
+        radial-gradient(1.5px 1.5px at 22% 64%, rgba(230,243,255,0.65) 1px, transparent 1px),
+        radial-gradient(1px 1px at 58% 74%, rgba(124,243,224,0.55) 1px, transparent 1px),
+        radial-gradient(1.2px 1.2px at 84% 82%, rgba(230,243,255,0.7) 1px, transparent 1px),
+        radial-gradient(1px 1px at 9% 82%, rgba(62,166,255,0.6) 1px, transparent 1px);
     }
 
-    /* BASE STYLES */
+    /* Day */
+    html[data-theme="day"] {
+      --bg: #e3f2ff;
+      --bg-rgb: 227, 242, 255;
+      --ink: #0a2342;
+      --muted: #4b6a8c;
+      --accent: #1769e0;
+      --aqua: #0a8f80;
+      --green: #1f8a4c;
+      --card: #ffffff;
+      --line: rgba(23, 105, 224, 0.22);
+      --glow: rgba(23, 105, 224, 0.2);
+      --ring-border: rgba(10, 143, 128, 0.38);
+      --orbit-border: rgba(23, 105, 224, 0.22);
+      --nav-bg: rgba(227, 242, 255, 0.88);
+      --chip-bg: rgba(255, 255, 255, 0.9);
+      --dax-bg: rgba(31, 138, 76, 0.1);
+      --dax-border: rgba(31, 138, 76, 0.32);
+      --dax-text: #1f8a4c;
+      --star-field: none;
+    }
+
+    /* BASE & RESET */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -84,11 +107,9 @@
 
     body {
       background-color: var(--bg);
-      background-image:
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-      background-size: 48px 48px;
-      background-position: -1px -1px;
+      background-image: var(--star-field);
+      background-size: 100% 100%;
+      background-attachment: fixed;
       color: var(--ink);
       font-family: var(--font-body);
       line-height: 1.6;
@@ -96,11 +117,21 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
-    ::selection {
-      background: var(--amber);
-      color: #13203a;
+    /* Seamless 0.5s theme transition for styled elements */
+    .site-header,
+    .project-card,
+    .ledger-row,
+    .contact-panel,
+    .btn,
+    .tech-chip,
+    .tag,
+    .dax-chip,
+    .status-pill,
+    .theme-toggle-btn {
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
     }
 
     a {
@@ -108,713 +139,678 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
-      color: inherit;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
+    /* Visible 3px Focus Outline */
     :focus-visible {
-      outline: 3px solid var(--ultramarine);
+      outline: 3px solid var(--aqua);
       outline-offset: 3px;
     }
 
     .container {
       width: 100%;
-      max-width: 1060px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 clamp(1rem, 3.5vw, 2.5rem);
+      padding: 0 1.5rem;
     }
 
-    /* SKIP LINK */
-    .skip-link {
-      position: absolute;
-      top: -60px;
-      left: 1rem;
-      background: var(--ink);
-      color: var(--panel);
-      padding: 0.5rem 1rem;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      z-index: 1000;
-      border: 2px solid var(--amber);
-      transition: top 0.2s ease;
-    }
-    .skip-link:focus {
-      top: 1rem;
+    /* STICKY BLURRED HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line);
+      padding-top: max(0.85rem, env(safe-area-inset-top));
+      padding-bottom: 0.85rem;
     }
 
-    /* PANELS */
-    .panel {
-      background: var(--panel);
-      border: 2px solid var(--ink);
-      border-radius: 0;
-      box-shadow: 8px 8px 0 var(--ink);
-      padding: clamp(1.5rem, 4vw, 2.75rem);
-      margin-bottom: clamp(2.5rem, 5vw, 4rem);
-      position: relative;
-    }
-
-    .panel-title {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.75rem;
-      color: var(--ink);
-    }
-
-    /* BUTTONS */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 0.65rem 1.45rem;
-      border-radius: 9999px;
-      border: 2px solid var(--ink);
-      text-decoration: none;
-      cursor: pointer;
-      background: var(--panel);
-      color: var(--ink);
-      white-space: nowrap;
-      transition: background-color 0.15s ease, color 0.15s ease;
-    }
-
-    .btn-primary {
-      background: var(--ink);
-      color: var(--panel);
-    }
-
-    .btn:hover,
-    .btn-primary:hover {
-      background: var(--amber);
-      color: #13203a;
-      border-color: var(--ink);
-    }
-
-    /* 1. NAV */
-    .site-nav {
-      padding: 1.75rem 0 1rem;
-    }
-
-    .nav-inner {
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 1rem;
     }
 
-    .brand-link {
+    .header-logo {
       font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
+      font-weight: 500;
+      font-size: 1.15rem;
+      letter-spacing: -0.04em;
       color: var(--ink);
     }
 
-    .nav-menu {
+    .header-right {
       display: flex;
       align-items: center;
-      list-style: none;
-      gap: clamp(1rem, 2.5vw, 2rem);
+      gap: 1.75rem;
     }
 
-    .nav-menu a {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.95rem;
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-nav a {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .header-nav a:hover {
+      color: var(--aqua);
+    }
+
+    .theme-toggle-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
       color: var(--ink);
-      text-decoration: none;
-      padding: 0.25rem 0;
+      background: var(--chip-bg);
+      border: 1px solid var(--line);
+      border-radius: 9999px;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
     }
 
-    .nav-menu a:hover {
-      text-decoration: underline;
-      text-decoration-color: var(--coral);
-      text-decoration-thickness: 2px;
-      text-underline-offset: 6px;
+    .theme-toggle-btn:hover {
+      border-color: var(--aqua);
+      color: var(--aqua);
     }
 
-    /* 2. HERO */
-    .hero {
-      padding: clamp(2rem, 5vw, 4rem) 0 clamp(2.5rem, 5vw, 4rem);
+    /* HERO SECTION */
+    .hero-section {
+      padding: 4.5rem 0 3.5rem;
     }
 
-    .hero-name-wrap {
-      margin-bottom: 2rem;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 2.5rem;
     }
 
-    .hero-name {
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--aqua);
+      border: 1px solid var(--aqua);
+      border-radius: 9999px;
+      padding: 0.35rem 0.85rem;
+      margin-bottom: 1.75rem;
+      background: var(--chip-bg);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--aqua);
+      box-shadow: 0 0 8px var(--aqua);
+    }
+
+    .hero-title {
       font-family: var(--font-heading);
-      font-weight: 800;
-      font-variation-settings: 'wdth' 75;
-      font-stretch: 75%;
-      font-size: clamp(3.4rem, 15.5vw, 12.5rem);
-      line-height: 0.82;
-      letter-spacing: -0.045em;
+      font-weight: 500;
+      font-size: clamp(2.9rem, 8.4vw, 6.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.038em;
+      margin-bottom: 1.5rem;
       display: flex;
       flex-direction: column;
     }
 
-    .name-first {
+    .hero-first {
       color: var(--ink);
     }
 
-    .name-last {
-      color: var(--ultramarine);
-      margin-left: clamp(0.75rem, 3.5vw, 2.5rem);
+    .hero-last {
+      background: linear-gradient(135deg, var(--accent) 15%, var(--aqua) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* HERO BAR CHART */
-    .hero-chart-container {
-      margin: 2.25rem 0 2.5rem;
-      padding-top: 1rem;
-      position: relative;
-    }
-
-    .hero-chart-track {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      height: 125px;
-      border-bottom: 3px solid var(--ink);
-      gap: 3px;
-      padding-bottom: 0;
-      cursor: crosshair;
-    }
-
-    .chart-bar {
-      flex: 1;
-      min-width: 3px;
-      max-width: 18px;
-      background-color: var(--ink);
-      height: var(--bar-h, 40px);
-      transform-origin: bottom;
-      transform: scaleY(0);
-      animation: growHeroBar 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      animation-delay: calc(var(--i) * 12ms);
-      transition: height 0.08s ease, background-color 0.12s ease;
-    }
-
-    @keyframes growHeroBar {
-      to {
-        transform: scaleY(1);
-      }
-    }
-
-    .hero-lead {
-      font-size: clamp(1.35rem, 2.6vw, 1.95rem);
-      line-height: 1.35;
-      color: var(--ink);
-      max-width: 820px;
-      margin-bottom: 1.75rem;
-    }
-
-    .highlight-coral {
-      color: var(--coral);
-      font-style: italic;
+    .hero-lede {
+      font-size: 1.15rem;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 520px;
+      margin-bottom: 2rem;
     }
 
     .hero-actions {
       display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* BUTTONS (No hover motion, only color/border changes per motion rules) */
+    .btn {
+      display: inline-flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-bottom: 2rem;
-    }
-
-    .chips-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .chip {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.8rem;
-      letter-spacing: -0.01em;
-      padding: 0.35rem 0.85rem;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.95rem;
       border-radius: 9999px;
-      border: 1.5px solid var(--ink);
-      background: var(--panel);
+      padding: 0.65rem 1.6rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
       color: var(--ink);
+      border: 1px solid var(--line);
     }
 
-    /* 3. TIMELINE GANTT */
-    .gantt-chart-wrap {
-      margin-bottom: 2.5rem;
-      overflow-x: auto;
-      padding-bottom: 0.75rem;
+    .btn-secondary:hover {
+      border-color: var(--aqua);
+      color: var(--aqua);
     }
 
-    .gantt-inner {
-      min-width: 580px;
-      position: relative;
-    }
-
-    .gantt-axis {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .axis-tick {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.85rem;
-      color: var(--muted);
-      position: relative;
-    }
-
-    .axis-tick::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -0.5rem;
-      width: 2px;
-      height: 6px;
-      background: var(--ink);
-    }
-
-    .axis-tick:last-child {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .gantt-grid-bg {
-      position: absolute;
-      top: 2rem;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .gantt-grid-col {
-      border-left: 1px dashed var(--grid);
-    }
-
-    .gantt-rows {
+    /* RIGHT COLUMN: LIVING PLANET STAGE */
+    .hero-planet-stage-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 1.15rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .planet-stage {
       position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+    }
+
+    /* ORBITS (Two dashed circles rotating in opposite directions) */
+    .orbit {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px dashed var(--orbit-border);
+      pointer-events: none;
+    }
+
+    .orbit-outer {
+      inset: 2%;
+      animation: spinOrbitCCW 78s linear infinite;
+    }
+
+    .orbit-inner {
+      inset: 15%;
+      animation: spinOrbitCW 44s linear infinite;
+    }
+
+    @keyframes spinOrbitCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spinOrbitCCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    /* Seven glowing moons (14px dots, alternating aqua and green) */
+    .moon {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    .moon-aqua {
+      background-color: var(--aqua);
+      box-shadow: 0 0 10px var(--aqua);
+    }
+
+    .moon-green {
+      background-color: var(--green);
+      box-shadow: 0 0 10px var(--green);
+    }
+
+    /* PLANET SYSTEM (Tilted -14deg, centered) */
+    .planet-system {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-14deg);
+      pointer-events: none;
+    }
+
+    /* NEPTUNE RING (7px border ellipse, behind and clipped front copy) */
+    .neptune-ring {
+      position: absolute;
+      width: 90%;
+      height: 33%;
+      border-radius: 50%;
+      border: 7px solid var(--ring-border);
+      box-shadow: 0 0 24px var(--glow);
+      pointer-events: none;
+    }
+
+    .ring-back {
       z-index: 1;
     }
 
-    .gantt-row {
-      display: flex;
-      align-items: center;
+    .ring-front {
+      z-index: 4;
+      clip-path: inset(50% 0 0 0);
+    }
+
+    /* PLANET SPHERE (~46% of stage, z-index: 2) */
+    .planet-sphere {
       position: relative;
-      height: 42px;
+      width: 46%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 2;
+      background: radial-gradient(circle at 35% 30%, #4fb3ff, #1f5fd6 50%, #0a2a7a);
+      box-shadow:
+        0 0 0 2px var(--aqua),
+        0 0 70px var(--glow),
+        inset -12px -12px 24px rgba(2, 10, 28, 0.75),
+        inset 6px 6px 14px rgba(124, 243, 224, 0.38);
+      pointer-events: auto;
+      cursor: crosshair;
     }
 
-    .gantt-bar-box {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      padding: 0 0.85rem;
-    }
-
-    .gantt-bar {
+    /* Continents & Clouds Surface Layer */
+    .planet-surface {
       position: absolute;
       inset: 0;
-      border: 2px solid var(--ink);
-      transform-origin: left;
-      transform: scaleX(0);
-      transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 50%;
+      background-size: 200% 100%;
+      background-repeat: repeat-x;
+      animation: rotatePlanet 70s linear infinite;
+      mix-blend-mode: screen;
+      pointer-events: none;
     }
 
-    .in-view .gantt-bar {
-      transform: scaleX(1);
+    @keyframes rotatePlanet {
+      from { background-position: 0 0; }
+      to { background-position: 200% 0; }
     }
 
-    .gantt-label {
-      position: relative;
-      z-index: 2;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.82rem;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    /* Gantt item variations */
-    .bar-btech .gantt-bar {
-      background: var(--ultramarine);
-    }
-    .bar-btech .gantt-label {
-      color: #fff;
-    }
-
-    .bar-capstone .gantt-bar {
-      background: var(--coral);
-    }
-    .bar-capstone .gantt-label {
-      color: #fff;
-    }
-    .bar-capstone-sublabel {
-      margin-left: 0.6rem;
-      font-family: var(--font-heading);
-      font-weight: 400;
-      font-size: 0.78rem;
-      color: var(--muted);
+    /* Terminator shading overlay (Cursor light tracking via --lx and --ly) */
+    .planet-sphere::after {
+      content: '';
       position: absolute;
-      left: 102%;
-      white-space: nowrap;
-    }
-
-    .bar-open .gantt-bar {
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--amber),
-        var(--amber) 8px,
-        var(--panel) 8px,
-        var(--panel) 16px
-      );
-      border: 2px dashed var(--ink);
-    }
-    .bar-open .gantt-label {
-      background: var(--panel);
-      padding: 0.15rem 0.5rem;
-      border: 1px solid var(--ink);
-      color: var(--ink);
-    }
-
-    /* Today vertical line: 2023.0 to 2027.0 (span of 4 years = 48 mos). Nov 2026 is month 46 out of 48 = 95.8% */
-    .gantt-today-line {
-      position: absolute;
-      top: -0.5rem;
-      bottom: -0.5rem;
-      left: 95.8%;
-      width: 2px;
-      background: var(--coral);
+      inset: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), transparent 28%, rgba(2, 10, 28, 0.82) 100%);
       z-index: 3;
     }
 
-    .today-tag {
-      position: absolute;
-      top: -1.4rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.68rem;
-      color: var(--coral);
-      white-space: nowrap;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    /* TIMELINE TWO COLUMNS */
-    .timeline-columns {
-      display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: 2.25rem;
-      border-top: 2px solid var(--ink);
-      padding-top: 2rem;
-    }
-
-    .col-title {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.35rem;
-      color: var(--ink);
-    }
-
-    .col-meta {
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .bullet-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      font-size: 0.98rem;
-    }
-
-    .bullet-list li {
-      position: relative;
-      padding-left: 1.15rem;
-    }
-
-    .bullet-list li::before {
-      content: '■';
-      position: absolute;
-      left: 0;
-      top: 0.2rem;
-      font-size: 0.55rem;
-      color: var(--ultramarine);
-    }
-
-    .marker-amber {
-      border-bottom: 3px solid var(--amber);
-      font-weight: 600;
-      display: inline-block;
-      line-height: 1.1;
-    }
-
-    .open-slot-text {
-      font-size: 1.05rem;
-      color: var(--ink);
-      margin-bottom: 1.25rem;
-    }
-
-    /* 4. PROJECTS (SIDE BY SIDE) */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(1.5rem, 3.5vw, 2.5rem);
-      margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    .projects-grid .panel {
-      margin-bottom: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mini-chart {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
-      height: 70px;
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 0;
-      margin-bottom: 1.5rem;
-    }
-
-    .mini-bar {
-      flex: 1;
-      border: 2px solid var(--ink);
-      border-bottom: none;
-      height: var(--h);
-    }
-    .mb-ultra { background: var(--ultramarine); }
-    .mb-coral { background: var(--coral); }
-    .mb-amber { background: var(--amber); }
-
-    /* DAX Measure Rows */
-    .dax-rows {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .dax-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.4rem 0.75rem;
-      background: var(--bg);
-      border-left: 5px solid var(--border-color);
-      border-top: 1px solid var(--grid);
-      border-right: 1px solid var(--grid);
-      border-bottom: 1px solid var(--grid);
-      font-family: var(--font-heading);
-      font-weight: 800;
+    /* Planet Caption */
+    .planet-caption {
+      font-family: var(--font-mono);
       font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 1.25rem;
       letter-spacing: -0.01em;
     }
 
-    .dax-badge {
+    /* TECH CHIPS ROW */
+    .tech-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 2.75rem;
+    }
+
+    .tech-chip {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.82rem;
+      color: var(--ink);
+      background: var(--chip-bg);
+      border: 1px solid var(--line);
+      border-radius: 9999px;
+      padding: 0.4rem 1.1rem;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      color: var(--aqua);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+
+    /* 1. MISSION LOG / LEDGER */
+    .ledger {
+      border-top: 1px solid var(--line);
+    }
+
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 160px 1fr 240px;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ledger-row.ledger-open {
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .ledger-date {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       color: var(--muted);
+    }
+
+    .ledger-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .ledger-role {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+    .ledger-role-accent {
+      color: var(--accent);
+    }
+
+    .ledger-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .ledger-link {
+      display: inline-flex;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--aqua);
+      margin-top: 0.35rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .ledger-link:hover {
+      color: var(--accent);
+    }
+
+    .ledger-place {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* 2. PAYLOADS / PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .project-card:hover {
+      border-color: var(--aqua);
+    }
+
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      color: var(--ink);
     }
 
     .project-desc {
-      font-size: 1rem;
-      margin-bottom: 1.25rem;
-      flex-grow: 1;
-    }
-
-    .project-tags {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.96rem;
       color: var(--muted);
-      margin-bottom: 1.5rem;
+      line-height: 1.55;
     }
 
-    /* 5. EDUCATION */
-    .edu-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .edu-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.98rem;
-    }
-
-    .edu-pct {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.15rem;
-    }
-
-    .pct-ultra { color: var(--ultramarine); }
-    .pct-coral { color: var(--coral); }
-
-    .edu-track {
-      width: 100%;
-      height: 24px;
-      border: 2px solid var(--ink);
-      background: var(--bg);
-      position: relative;
-    }
-
-    .edu-fill {
-      height: 100%;
-      width: 0%;
-      transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .in-view .edu-fill-ultra {
-      width: 87.2%;
-      background: var(--ultramarine);
-    }
-
-    .in-view .edu-fill-coral {
-      width: 68.8%;
-      background: var(--coral);
-    }
-
-    .edu-footer {
-      border-top: 2px solid var(--ink);
-      padding-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
+    .dax-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 0.65rem;
     }
 
-    .edu-entry {
-      font-size: 1.05rem;
+    .dax-chip {
+      background: var(--dax-bg);
+      border: 1px solid var(--dax-border);
+      color: var(--dax-text);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      text-align: center;
+      letter-spacing: -0.01em;
     }
 
-    .edu-cert {
-      font-family: var(--font-heading);
-      font-weight: 800;
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--muted);
+      background: rgba(var(--bg-rgb), 0.5);
+      border: 1px solid var(--line);
+      border-radius: 9999px;
+      padding: 0.25rem 0.75rem;
+    }
+
+    .project-footer {
+      padding-top: 0.5rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--aqua);
+    }
+
+    .project-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* 3. TRAINING / EDUCATION */
+    .score-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .score-value {
+      font-family: var(--font-mono);
       font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--aqua);
+    }
+
+    .score-track {
+      width: 100%;
+      max-width: 440px;
+      height: 4px;
+      background: var(--chip-bg);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 0.65rem;
+    }
+
+    .score-fill {
+      height: 100%;
+      width: var(--target-pct);
+      background: linear-gradient(90deg, var(--accent), var(--aqua));
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .score-fill.filled {
+      transform: scaleX(1);
+    }
+
+    /* 4. TRANSMIT / CONTACT */
+    .contact-panel {
+      background: var(--card);
+      border: 1px solid var(--accent);
+      box-shadow: 0 0 36px var(--glow);
+      border-radius: 24px;
+      padding: 3.5rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .contact-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      max-width: 680px;
+      line-height: 1.15;
+    }
+
+    .contact-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 500px;
+    }
+
+    .btn-pill-email {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: 1px solid var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      padding: 0.75rem 2rem;
+      cursor: pointer;
+    }
+
+    .btn-pill-email:hover {
+      background-color: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .email-link-revealed {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--aqua);
+      border: 1px solid var(--aqua);
+      border-radius: 9999px;
+      padding: 0.75rem 2rem;
+      background: var(--chip-bg);
+      text-decoration: none;
+    }
+
+    .email-link-revealed:hover {
+      background: var(--aqua);
+      color: var(--bg);
+    }
+
+    .contact-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .mono-link {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
       color: var(--muted);
     }
 
-    /* 6. CONTACT */
-    .sql-terminal {
-      background: var(--ink);
-      color: #e8eef8;
-      border: 2px solid var(--ink);
-      padding: clamp(1.25rem, 3vw, 2rem);
-      margin-bottom: 2rem;
-      overflow-x: auto;
+    .mono-link:hover {
+      color: var(--aqua);
     }
 
-    .sql-code {
-      font-family: var(--font-mono);
-      font-size: clamp(0.95rem, 2vw, 1.25rem);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-
-    .kw-amber {
-      color: var(--amber);
-      font-weight: 700;
-    }
-
-    .str-coral {
-      color: var(--coral);
-    }
-
-    .sql-result {
-      border-top: 1px dashed #3a4a68;
-      padding-top: 1rem;
+    .mono-sep {
+      color: var(--line);
       font-family: var(--font-mono);
       font-size: 0.85rem;
     }
 
-    .sql-result-header {
-      color: #8da2c0;
-      font-size: 0.78rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .sql-result-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      min-height: 38px;
-    }
-
-    .btn-reveal-email {
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--amber);
-      border: 1px solid var(--amber);
-      padding: 0.35rem 0.85rem;
-      border-radius: 4px;
-      transition: background 0.15s ease, color 0.15s ease;
-    }
-
-    .btn-reveal-email:hover {
-      background: var(--amber);
-      color: #13203a;
-    }
-
-    .email-revealed {
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      color: #fff;
-      font-weight: 700;
-      text-decoration: underline;
-      text-decoration-color: var(--coral);
-      text-underline-offset: 4px;
-    }
-
-    .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-    }
-
-    /* 7. FOOTER */
+    /* FOOTER */
     .site-footer {
-      padding: 2rem 0 3.5rem;
+      border-top: 1px solid var(--line);
+      padding: 2.25rem 0;
       margin-top: auto;
     }
 
@@ -822,446 +818,482 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 2px solid var(--ink);
-      padding-top: 1.5rem;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.95rem;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
       color: var(--muted);
     }
 
     .footer-inner a:hover {
-      color: var(--coral);
+      color: var(--aqua);
     }
 
-    /* PREFERS-REDUCED-MOTION */
+    /* MOTION RULES COMPLIANCE (Only 3 motion moments; disabled on prefers-reduced-motion) */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
+        animation: none !important;
+        transition: none !important;
       }
-
-      .chart-bar {
-        transform: scaleY(1) !important;
-      }
-
-      .gantt-bar {
+      .score-fill {
         transform: scaleX(1) !important;
-      }
-
-      .edu-fill-ultra {
-        width: 87.2% !important;
-      }
-
-      .edu-fill-coral {
-        width: 68.8% !important;
       }
     }
 
     /* RESPONSIVE BREAKPOINTS */
-    @media (max-width: 768px) {
-      .timeline-columns {
+    @media (max-width: 860px) {
+      .hero-grid {
         grid-template-columns: 1fr;
-        gap: 1.75rem;
+        gap: 3rem;
       }
+      .hero-planet-stage-wrapper {
+        order: -1;
+      }
+      .planet-stage {
+        max-width: 320px;
+      }
+      .ledger-row {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+      .ledger-place {
+        text-align: left;
+      }
+      .header-nav {
+        display: none;
+      }
+    }
 
-      .projects-grid {
+    @media (max-width: 480px) {
+      .contact-links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .mono-sep {
+        display: none;
+      }
+      .dax-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
+<body id="top">
 
-  <!-- 1. NAV -->
-  <header class="site-nav">
-    <div class="container nav-inner">
-      <a href="#top" class="brand-link" aria-label="Sagnik Behera Home">sagnik.dev</a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- STICKY BLURRED HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="header-logo" aria-label="sagnik.dev home">sagnik.dev</a>
+      <div class="header-right">
+        <nav class="header-nav" aria-label="Main Navigation">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle visual theme" aria-pressed="false">Day view</button>
+      </div>
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- 2. HERO -->
-    <section class="hero" id="top">
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
       <div class="container">
-        <div class="hero-name-wrap">
-          <h1 class="hero-name">
-            <span class="name-first">Sagnik</span>
-            <span class="name-last">Behera</span>
-          </h1>
-        </div>
-
-        <!-- 44 Vertical Bars Chart sitting on 3px baseline -->
-        <div class="hero-chart-container" id="hero-chart-container" aria-hidden="true">
-          <div class="hero-chart-track" id="hero-chart-track">
-            <!-- 44 vertical bars populated with natural distribution heights -->
+        <div class="hero-grid">
+          
+          <!-- LEFT COLUMN -->
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Open to building · Odisha, IN</span>
+            </div>
+            <h1 class="hero-title">
+              <span class="hero-first">Sagnik</span>
+              <span class="hero-last">Behera</span>
+            </h1>
+            <p class="hero-lede">
+              Data science student turning raw data into clear business insights.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">See the work</a>
+              <a href="/assets/Sagnik_resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Résumé</a>
+            </div>
           </div>
+
+          <!-- RIGHT COLUMN: LIVING PLANET STAGE -->
+          <div class="hero-planet-stage-wrapper">
+            <div class="planet-stage" id="planet-stage" aria-hidden="true">
+              
+              <!-- Outer Orbit (inset 2%, rotating 78s CCW) with 4 moons -->
+              <div class="orbit orbit-outer">
+                <span class="moon moon-aqua" style="top: calc(50% - 7px); left: calc(100% - 7px);"></span>
+                <span class="moon moon-green" style="top: -7px; left: calc(50% - 7px);"></span>
+                <span class="moon moon-aqua" style="top: calc(50% - 7px); left: -7px;"></span>
+                <span class="moon moon-green" style="top: calc(100% - 7px); left: calc(50% - 7px);"></span>
+              </div>
+
+              <!-- Inner Orbit (inset 15%, rotating 44s CW) with 3 moons -->
+              <div class="orbit orbit-inner">
+                <span class="moon moon-green" style="top: calc(15% - 7px); left: calc(15% - 7px);"></span>
+                <span class="moon moon-aqua" style="top: calc(15% - 7px); left: calc(85% - 7px);"></span>
+                <span class="moon moon-green" style="top: calc(90% - 7px); left: calc(50% - 7px);"></span>
+              </div>
+
+              <!-- Planet & Ring System (tilted -14deg) -->
+              <div class="planet-system">
+                <!-- Neptune Ring: Back Half (z-index: 1) -->
+                <div class="neptune-ring ring-back"></div>
+
+                <!-- Planet Sphere (z-index: 2, 46% of stage) -->
+                <div class="planet-sphere" id="planet-sphere">
+                  <!-- Surface Layer: Continents & Clouds SVG data-URI -->
+                  <div class="planet-surface" id="planet-surface"></div>
+                </div>
+
+                <!-- Neptune Ring: Front Half (z-index: 4, clipped to lower half) -->
+                <div class="neptune-ring ring-front"></div>
+              </div>
+
+            </div>
+
+            <!-- Planet Caption -->
+            <p class="planet-caption">
+              71% of Earth is ocean · Neptune's winds top 2,000 km/h
+            </p>
+          </div>
+
         </div>
 
-        <p class="hero-lead">
-          I turn raw data into <em class="highlight-coral">clear business insights</em> people can act on.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">See the work ↘</a>
-          <a href="/assets/Sagnik_resume.pdf" class="btn" download target="_blank" rel="noopener noreferrer">Download résumé ↓</a>
+        <!-- ROW OF PILL CHIPS BELOW HERO -->
+        <div class="tech-chips-row" aria-label="Core technologies">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">SQL</span>
+          <span class="tech-chip">MySQL</span>
+          <span class="tech-chip">Power BI</span>
+          <span class="tech-chip">DAX</span>
+          <span class="tech-chip">Jupyter</span>
+          <span class="tech-chip">Google Colab</span>
         </div>
 
-        <div class="chips-row">
-          <span class="chip">Python</span>
-          <span class="chip">SQL</span>
-          <span class="chip">MySQL</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">DAX</span>
-          <span class="chip">Google Colab</span>
-          <span class="chip">Jupyter</span>
-        </div>
       </div>
     </section>
 
-    <!-- 3. TIMELINE -->
-    <section class="timeline-section" id="timeline">
+    <!-- 1. MISSION LOG / EXPERIENCE -->
+    <section id="experience" class="section">
       <div class="container">
-        <div class="panel" id="timeline-panel">
-          <h2 class="panel-title">My timeline, charted</h2>
-
-          <!-- Gantt Chart -->
-          <div class="gantt-chart-wrap">
-            <div class="gantt-inner">
-              <div class="gantt-axis">
-                <div class="axis-tick">2023</div>
-                <div class="axis-tick">2024</div>
-                <div class="axis-tick">2025</div>
-                <div class="axis-tick">
-                  <span>2026</span>
-                  <span>2027</span>
-                </div>
-              </div>
-
-              <div class="gantt-grid-bg">
-                <div class="gantt-grid-col"></div>
-                <div class="gantt-grid-col"></div>
-                <div class="gantt-grid-col"></div>
-                <div class="gantt-grid-col" style="border-right: 1px dashed var(--grid);"></div>
-              </div>
-
-              <!-- Today vertical line (Nov 2026) -->
-              <div class="gantt-today-line" title="Current Date: November 2026">
-                <span class="today-tag">Today</span>
-              </div>
-
-              <div class="gantt-rows">
-                <!-- Row 1: B.Tech (2023 - 2027: 100% width) -->
-                <div class="gantt-row">
-                  <div class="gantt-bar-box bar-btech" style="left: 0%; width: 100%;">
-                    <div class="gantt-bar"></div>
-                    <span class="gantt-label">B.Tech, Computer Science (Data Science)</span>
-                  </div>
-                </div>
-
-                <!-- Row 2: Capstone (Jan-Jun 2024: 25% to 37.5% -> left 25%, width 12.5%) -->
-                <div class="gantt-row">
-                  <div class="gantt-bar-box bar-capstone" style="left: 25%; width: 12.5%;">
-                    <div class="gantt-bar"></div>
-                    <span class="gantt-label">Capstone</span>
-                    <span class="bar-capstone-sublabel">Jan-Jun 2024</span>
-                  </div>
-                </div>
-
-                <!-- Row 3: Next Slot: Open (2026 to Now: left 75%, width 21%) -->
-                <div class="gantt-row">
-                  <div class="gantt-bar-box bar-open" style="left: 75%; width: 21%;">
-                    <div class="gantt-bar"></div>
-                    <span class="gantt-label">Open</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Two Columns -->
-          <div class="timeline-columns">
-            <div class="timeline-col">
-              <h3 class="col-title">Marketing Performance Capstone</h3>
-              <div class="col-meta">Data analytics capstone, Jan-Jun 2024 · C.V. Raman Global University</div>
-              <ul class="bullet-list">
-                <li>Built a dashboard to track and compare marketing campaign performance across channels.</li>
-                <li>Collected, cleaned and preprocessed campaign, engagement, social media and web traffic data.</li>
-                <li>Analyzed <span class="marker-amber">click-through rate</span>, <span class="marker-amber">conversion rate</span>, <span class="marker-amber">customer reach</span> and <span class="marker-amber">ROI</span> to evaluate effectiveness.</li>
-                <li>Produced campaign reports and monthly summaries for data-driven marketing decisions.</li>
-              </ul>
-            </div>
-
-            <div class="timeline-col">
-              <h3 class="col-title">Next slot: open to building</h3>
-              <p class="open-slot-text">
-                Available for full-time Data Analyst / Data Science roles and engineering collaborations. Let's discuss where data can unlock real value.
+        <div class="section-label">Mission log</div>
+        <h2 class="section-title">Experience</h2>
+        <div class="ledger">
+          
+          <!-- Row 1: Marketing Performance Capstone -->
+          <div class="ledger-row">
+            <div class="ledger-date">Jan — Jun 2024</div>
+            <div class="ledger-main">
+              <h3 class="ledger-role">Marketing Performance Capstone</h3>
+              <p class="ledger-desc">
+                Built a dashboard tracking campaign performance across channels. Cleaned engagement, social and web-traffic data, then analyzed CTR, conversion rate, reach and ROI. Wrote campaign reports and monthly summaries to support marketing decisions.
               </p>
-              <a href="#contact" class="btn btn-primary">Get in touch ↘</a>
             </div>
+            <div class="ledger-place">C.V. Raman Global University</div>
           </div>
+
+          <!-- Row 2: Next Role (dashed bottom border, accent title) -->
+          <div class="ledger-row ledger-open">
+            <div class="ledger-date">2026 — Present</div>
+            <div class="ledger-main">
+              <h3 class="ledger-role ledger-role-accent">Next role: open</h3>
+              <p class="ledger-desc">
+                Looking for a data science internship or analyst position.
+              </p>
+              <div>
+                <a href="#contact" class="ledger-link">Get in touch →</a>
+              </div>
+            </div>
+            <div class="ledger-place">Open to building</div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 4. PROJECTS -->
-    <section class="projects-section" id="projects">
+    <!-- 2. PAYLOADS / SELECTED PROJECTS -->
+    <section id="projects" class="section">
       <div class="container">
+        <div class="section-label">Payloads</div>
+        <h2 class="section-title">Selected projects</h2>
         <div class="projects-grid">
-          <!-- Project 1: Marketing Performance Dashboard -->
-          <article class="panel">
-            <!-- Mini Bar Chart -->
-            <div class="mini-chart" aria-hidden="true">
-              <div class="mini-bar mb-ultra" style="--h: 52px;" title="Channel CTR"></div>
-              <div class="mini-bar mb-coral" style="--h: 68px;" title="Conversions"></div>
-              <div class="mini-bar mb-amber" style="--h: 40px;" title="ROI"></div>
-              <div class="mini-bar mb-ultra" style="--h: 62px;" title="Engagement"></div>
-              <div class="mini-bar mb-coral" style="--h: 46px;" title="Reach"></div>
-            </div>
-
-            <h3 class="panel-title" style="font-size: 1.45rem; margin-bottom: 0.85rem;">Marketing Performance Dashboard</h3>
+          
+          <!-- Project (a) -->
+          <article class="project-card">
+            <h3 class="project-title">Marketing Performance Dashboard</h3>
             <p class="project-desc">
-              Built an analytics dashboard to track, compare, and visualize marketing campaign performance across channels with CTR, conversion rate, customer reach, and ROI breakdowns.
+              Tracks and visualizes campaign performance across channels with CTR, conversion and ROI insights.
             </p>
-            <div class="project-tags">Python · SQL · Data analytics · Dashboards</div>
-            <div>
-              <a href="https://github.com/Sagnik267" class="btn" target="_blank" rel="noopener noreferrer">View repo on GitHub ↗</a>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Dashboards</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="project-link">View repo ↗</a>
             </div>
           </article>
 
-          <!-- Project 2: Marketing Campaign Analysis -->
-          <article class="panel">
-            <!-- Four DAX Measure Rows -->
-            <div class="dax-rows" aria-label="DAX Measures">
-              <div class="dax-row" style="--border-color: var(--ultramarine);">
-                <span>Total Purchase</span>
-                <span class="dax-badge">MEASURE</span>
-              </div>
-              <div class="dax-row" style="--border-color: var(--coral);">
-                <span>Target Response</span>
-                <span class="dax-badge">MEASURE</span>
-              </div>
-              <div class="dax-row" style="--border-color: var(--amber);">
-                <span>Campaign Profit</span>
-                <span class="dax-badge">MEASURE</span>
-              </div>
-              <div class="dax-row" style="--border-color: var(--ultramarine);">
-                <span>Percentage Success</span>
-                <span class="dax-badge">MEASURE</span>
-              </div>
-            </div>
-
-            <h3 class="panel-title" style="font-size: 1.45rem; margin-bottom: 0.85rem;">Marketing Campaign Analysis</h3>
+          <!-- Project (b) -->
+          <article class="project-card">
+            <h3 class="project-title">Marketing Campaign Analysis</h3>
             <p class="project-desc">
-              Collaborated on a Power BI project modeling and evaluating customer campaign response, revenue impact, and campaign effectiveness using custom DAX measures.
+              Power BI model with custom DAX measures evaluating customer response and revenue effectiveness.
             </p>
-            <div class="project-tags">Power BI Desktop · DAX · MySQL · Data preprocessing</div>
-            <div>
-              <a href="https://github.com/Sagnik267" class="btn" target="_blank" rel="noopener noreferrer">View repo on GitHub ↗</a>
+            <!-- 2x2 grid of small green-tinted chips for the 4 DAX measures -->
+            <div class="dax-grid" aria-label="Custom DAX Measures">
+              <div class="dax-chip">Total Purchase</div>
+              <div class="dax-chip">Target Response</div>
+              <div class="dax-chip">Campaign Profit</div>
+              <div class="dax-chip">Percentage Success</div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="project-link">View repo ↗</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- 5. EDUCATION -->
-    <section class="education-section" id="education">
+    <!-- 3. TRAINING / EDUCATION -->
+    <section id="education" class="section">
       <div class="container">
-        <div class="panel" id="education-panel">
-          <h2 class="panel-title">Education, by the numbers</h2>
-
-          <div class="edu-bars">
-            <!-- Bar 1: Class X (87.2%) -->
-            <div class="edu-item">
-              <div class="edu-header">
-                <span>Class X · Rabindra Vidya Niketan (CBSE), 2021</span>
-                <span class="edu-pct pct-ultra">87.2%</span>
-              </div>
-              <div class="edu-track">
-                <div class="edu-fill edu-fill-ultra"></div>
-              </div>
+        <div class="section-label">Training</div>
+        <h2 class="section-title">Education</h2>
+        <div class="ledger" id="education-ledger">
+          
+          <!-- Row 1: B.Tech -->
+          <div class="ledger-row">
+            <div class="ledger-date">2023 — 2027</div>
+            <div class="ledger-main">
+              <h3 class="ledger-role">B.Tech Computer Science Engineering (Data Science)</h3>
+              <p class="ledger-desc">C.V. Raman Global University, Bhubaneswar</p>
             </div>
-
-            <!-- Bar 2: Class XII (68.8%) -->
-            <div class="edu-item">
-              <div class="edu-header">
-                <span>Class XII Science · Rabindra Vidya Niketan (CBSE), 2023</span>
-                <span class="edu-pct pct-coral">68.8%</span>
-              </div>
-              <div class="edu-track">
-                <div class="edu-fill edu-fill-coral"></div>
-              </div>
-            </div>
+            <div class="ledger-place">Undergraduate</div>
           </div>
 
-          <div class="edu-footer">
-            <p class="edu-entry">
-              <strong>B.Tech in Computer Science Engineering (Data Science)</strong> · C.V. Raman Global University, Bhubaneswar (2023–2027)
-            </p>
-            <p class="edu-cert">Certified: Data Analytics, issued by Krutanic.</p>
+          <!-- Row 2: Class XII -->
+          <div class="ledger-row">
+            <div class="ledger-date">2023</div>
+            <div class="ledger-main">
+              <div class="score-header">
+                <h3 class="ledger-role">Class XII Science</h3>
+                <span class="score-value">68.80%</span>
+              </div>
+              <p class="ledger-desc">Rabindra Vidya Niketan (CBSE)</p>
+              <div class="score-track" aria-label="Score: 68.80%">
+                <div class="score-fill" style="--target-pct: 68.8%;"></div>
+              </div>
+            </div>
+            <div class="ledger-place">Higher Secondary</div>
           </div>
+
+          <!-- Row 3: Class X -->
+          <div class="ledger-row">
+            <div class="ledger-date">2021</div>
+            <div class="ledger-main">
+              <div class="score-header">
+                <h3 class="ledger-role">Class X</h3>
+                <span class="score-value">87.20%</span>
+              </div>
+              <p class="ledger-desc">Rabindra Vidya Niketan (CBSE)</p>
+              <div class="score-track" aria-label="Score: 87.20%">
+                <div class="score-fill" style="--target-pct: 87.2%;"></div>
+              </div>
+            </div>
+            <div class="ledger-place">Secondary</div>
+          </div>
+
+          <!-- Row 4: Certification -->
+          <div class="ledger-row">
+            <div class="ledger-date">Certified</div>
+            <div class="ledger-main">
+              <h3 class="ledger-role">Data Analytics Certification</h3>
+              <p class="ledger-desc">Issued by Krutanic</p>
+            </div>
+            <div class="ledger-place">Credential</div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 6. CONTACT -->
-    <section class="contact-section" id="contact">
+    <!-- 4. TRANSMIT / CONTACT -->
+    <section id="contact" class="section">
       <div class="container">
-        <div class="panel">
-          <h2 class="panel-title">Contact</h2>
-
-          <!-- Dark SQL Terminal -->
-          <div class="sql-terminal" role="region" aria-label="SQL Contact Query">
-            <div class="sql-code">
-              <span class="kw-amber">SELECT</span> email <span class="kw-amber">FROM</span> sagnik<br>
-              <span class="kw-amber">WHERE</span> status = <span class="str-coral">'open to building'</span>;
-            </div>
-            <div class="sql-result">
-              <div class="sql-result-header">-- 1 row in set (0.002 sec)</div>
-              <div class="sql-result-row">
-                <button type="button" class="btn-reveal-email" id="reveal-email-btn" aria-expanded="false">show email</button>
-                <span id="revealed-email-span" style="display: none;"></span>
-              </div>
-            </div>
+        <div class="section-label">Transmit</div>
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-panel">
+          <h3 class="contact-heading">Let's build something worth measuring.</h3>
+          <p class="contact-sub">
+            Looking for a data science intern or analyst? Let's connect.
+          </p>
+          
+          <div class="contact-action">
+            <button id="show-email-btn" class="btn btn-pill-email" aria-expanded="false">
+              Show my email
+            </button>
+            <div id="email-result" style="display: none;"></div>
           </div>
 
-          <!-- Pill Buttons -->
-          <div class="contact-buttons">
-            <a href="https://github.com/Sagnik267" class="btn" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="/assets/Sagnik_resume.pdf" class="btn" download target="_blank" rel="noopener noreferrer">Résumé ↓</a>
+          <div class="contact-links" aria-label="Social and Resume Links">
+            <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="mono-link">GitHub ↗</a>
+            <span class="mono-sep">/</span>
+            <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" target="_blank" rel="noopener noreferrer" class="mono-link">LinkedIn ↗</a>
+            <span class="mono-sep">/</span>
+            <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="mono-link">Résumé ↓</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 7. FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Sagnik Behera</span>
-      <a href="#top" aria-label="Scroll back to top">Back to top ↑</a>
+      <a href="#top" class="back-to-top" aria-label="Scroll back to top">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- VANILLA JAVASCRIPT: Motion moments & Dynamic Scraper-Resistant Email -->
+  <!-- VANILLA JAVASCRIPT -->
   <script>
     (function() {
-      // 1. POPULATE HERO CHART (44 bars with natural distribution curve)
-      const track = document.getElementById('hero-chart-track');
-      const TOTAL_BARS = 44;
-      const baseHeights = [];
-      const barElements = [];
+      // 1. THEME MANAGEMENT: Day / Night View Toggle
+      const htmlEl = document.documentElement;
+      const themeBtn = document.getElementById('theme-toggle');
+      const metaTheme = document.getElementById('meta-theme-color');
 
-      // Generate a structured data-like distribution curve
-      for (let i = 0; i < TOTAL_BARS; i++) {
-        // Multi-frequency sine distribution for natural report aesthetics
-        const norm = i / (TOTAL_BARS - 1);
-        const wave = Math.sin(norm * Math.PI * 1.5) * 0.35 + Math.sin(norm * Math.PI * 4.2) * 0.18 + Math.cos(norm * Math.PI * 2.8) * 0.22;
-        const normalizedH = Math.max(0.18, Math.min(0.95, 0.45 + wave));
-        const pxHeight = Math.round(normalizedH * 110);
-        baseHeights.push(pxHeight);
+      // Initialize based on prefers-color-scheme
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      let currentTheme = systemPrefersLight ? 'day' : 'night';
 
-        const bar = document.createElement('div');
-        bar.className = 'chart-bar';
-        bar.style.setProperty('--i', i);
-        bar.style.setProperty('--bar-h', pxHeight + 'px');
-        bar.style.height = pxHeight + 'px';
-        track.appendChild(bar);
-        barElements.push(bar);
+      function applyTheme(theme) {
+        currentTheme = theme;
+        htmlEl.setAttribute('data-theme', theme);
+        if (themeBtn) {
+          themeBtn.textContent = theme === 'night' ? 'Day view' : 'Night view';
+          themeBtn.setAttribute('aria-pressed', theme === 'day' ? 'true' : 'false');
+        }
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'night' ? '#040f24' : '#e3f2ff');
+        }
       }
 
-      // Pointermove gaussian interaction
-      const heroContainer = document.getElementById('hero-chart-container');
+      applyTheme(currentTheme);
+
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function() {
+          applyTheme(currentTheme === 'night' ? 'day' : 'night');
+        });
+      }
+
+      // 2. INJECT CONTINENTS & CLOUDS SVG AS DATA-URI
+      // 400x200 viewBox: green blobs #47b873 and white ellipses at 60% opacity
+      const planetSurface = document.getElementById('planet-surface');
+      if (planetSurface) {
+        const svgContent = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">' +
+          '<g fill="#47b873">' +
+            '<path d="M -10,48 Q 30,28 85,40 T 145,65 T 120,110 T 55,100 T -10,48 Z" />' +
+            '<path d="M 390,48 Q 430,28 485,40 T 545,65 T 520,110 T 455,100 T 390,48 Z" />' +
+            '<path d="M 68,112 Q 105,108 126,136 T 114,180 T 68,170 T 50,128 Z" />' +
+            '<path d="M 205,44 Q 255,18 305,40 T 355,80 T 315,115 T 245,95 T 205,44 Z" />' +
+            '<path d="M 255,122 Q 295,116 325,140 T 305,180 T 250,168 Z" />' +
+            '<circle cx="165" cy="85" r="5" />' +
+            '<circle cx="182" cy="116" r="4" />' +
+            '<circle cx="375" cy="118" r="4" />' +
+            '<circle cx="-25" cy="118" r="4" />' +
+          '</g>' +
+          '<g fill="rgba(255,255,255,0.6)">' +
+            '<ellipse cx="90" cy="38" rx="55" ry="7" />' +
+            '<ellipse cx="290" cy="32" rx="68" ry="8" />' +
+            '<ellipse cx="195" cy="92" rx="78" ry="9" />' +
+            '<ellipse cx="55" cy="130" rx="44" ry="7" />' +
+            '<ellipse cx="345" cy="152" rx="58" ry="8" />' +
+            '<ellipse cx="165" cy="168" rx="72" ry="7" />' +
+            '<path d="M -10,76 Q 25,68 65,78 T 140,80" stroke="rgba(255,255,255,0.6)" stroke-width="5" stroke-linecap="round" fill="none" />' +
+            '<path d="M 390,76 Q 425,68 465,78 T 540,80" stroke="rgba(255,255,255,0.6)" stroke-width="5" stroke-linecap="round" fill="none" />' +
+            '<path d="M 220,70 Q 260,60 305,74 T 380,75" stroke="rgba(255,255,255,0.6)" stroke-width="5" stroke-linecap="round" fill="none" />' +
+          '</g>' +
+        '</svg>';
+
+        const encodedUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
+        planetSurface.style.backgroundImage = 'url("' + encodedUri + '")';
+      }
+
+      // 3. CURSOR-DRIVEN LIGHT (Terminator shading follows pointer over hero)
+      const heroEl = document.getElementById('hero');
+      const planetSphere = document.getElementById('planet-sphere');
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      if (!prefersReduced && heroContainer) {
-        heroContainer.addEventListener('pointermove', function(e) {
-          const rect = track.getBoundingClientRect();
-          const pointerX = e.clientX - rect.left;
-          const sigma = 58; // Gaussian spread in pixels
-          const boostMax = 38; // Max height increase
-
-          barElements.forEach((bar, idx) => {
-            const barRect = bar.getBoundingClientRect();
-            const barCenterX = (barRect.left + barRect.right) / 2 - rect.left;
-            const dx = pointerX - barCenterX;
-            const gaussian = Math.exp(-(dx * dx) / (2 * sigma * sigma));
-
-            const newHeight = Math.min(125, Math.round(baseHeights[idx] + gaussian * boostMax));
-            bar.style.height = newHeight + 'px';
-
-            if (gaussian > 0.42) {
-              bar.style.backgroundColor = 'var(--coral)';
-            } else {
-              bar.style.backgroundColor = 'var(--ink)';
-            }
-          });
+      if (!prefersReduced && heroEl && planetSphere) {
+        heroEl.addEventListener('pointermove', function(e) {
+          const rect = planetSphere.getBoundingClientRect();
+          const rawX = ((e.clientX - rect.left) / rect.width) * 100;
+          const rawY = ((e.clientY - rect.top) / rect.height) * 100;
+          const lx = Math.max(0, Math.min(100, rawX));
+          const ly = Math.max(0, Math.min(100, rawY));
+          planetSphere.style.setProperty('--lx', lx.toFixed(1) + '%');
+          planetSphere.style.setProperty('--ly', ly.toFixed(1) + '%');
         });
 
-        heroContainer.addEventListener('pointerleave', function() {
-          barElements.forEach((bar, idx) => {
-            bar.style.height = baseHeights[idx] + 'px';
-            bar.style.backgroundColor = 'var(--ink)';
-          });
+        heroEl.addEventListener('pointerleave', function() {
+          planetSphere.style.setProperty('--lx', '30%');
+          planetSphere.style.setProperty('--ly', '28%');
         });
       }
 
-      // 2. ONE-TIME SCROLL REVEAL OBSERVER (Timeline Gantt & Education Bars)
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2
-      };
+      // 4. ONE-TIME SCORE-BAR FILL ANIMATION (IntersectionObserver)
+      const eduSection = document.getElementById('education-ledger');
+      if (eduSection) {
+        const scoreObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              const fills = entry.target.querySelectorAll('.score-fill');
+              fills.forEach(function(fill) {
+                fill.classList.add('filled');
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
 
-      const revealObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            obs.unobserve(entry.target); // Reveal once only
-          }
-        });
-      }, observerOptions);
+        scoreObserver.observe(eduSection);
+      }
 
-      const timelinePanel = document.getElementById('timeline-panel');
-      const eduPanel = document.getElementById('education-panel');
+      // 5. SCRAPER-RESISTANT EMAIL ASSEMBLY
+      const showEmailBtn = document.getElementById('show-email-btn');
+      const emailResult = document.getElementById('email-result');
 
-      if (timelinePanel) revealObserver.observe(timelinePanel);
-      if (eduPanel) revealObserver.observe(eduPanel);
-
-      // 3. CONTACT SQL EMAIL REVEAL (built dynamically in JS to prevent scraper scraping)
-      const revealBtn = document.getElementById('reveal-email-btn');
-      const targetSpan = document.getElementById('revealed-email-span');
-
-      if (revealBtn && targetSpan) {
-        revealBtn.addEventListener('click', function() {
+      if (showEmailBtn && emailResult) {
+        showEmailBtn.addEventListener('click', function() {
           const u = 'sagnikbehera30';
           const d = 'gmail';
           const t = 'com';
-          const full = u + '@' + d + '.' + t;
+          const fullEmail = u + '@' + d + '.' + t;
 
-          const a = document.createElement('a');
-          a.href = 'mailto:' + full;
-          a.className = 'email-revealed';
-          a.textContent = full;
-          a.setAttribute('aria-label', 'Send email to ' + full);
+          const emailLink = document.createElement('a');
+          emailLink.href = 'mailto:' + fullEmail;
+          emailLink.className = 'email-link-revealed';
+          emailLink.textContent = fullEmail;
+          emailLink.setAttribute('aria-label', 'Send email to ' + fullEmail);
 
-          targetSpan.innerHTML = '';
-          targetSpan.appendChild(a);
-          targetSpan.style.display = 'inline';
+          emailResult.innerHTML = '';
+          emailResult.appendChild(emailLink);
+          emailResult.style.display = 'block';
 
-          revealBtn.style.display = 'none';
-          revealBtn.setAttribute('aria-expanded', 'true');
+          showEmailBtn.style.display = 'none';
+          showEmailBtn.setAttribute('aria-expanded', 'true');
         });
       }
     })();
