@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Sagnik Behera · Data Science Student</title>
-  <meta name="description" content="Portfolio of Sagnik Behera, a Data Science student turning raw data into clear business insights. Specialized in Python, SQL, Power BI, and DAX." />
+  <title>Sagnik · Sagnik Behera · Portfolio</title>
+  <meta name="description" content="Portfolio of Sagnik Behera, a Data Science student turning raw data into clear business insights & practical data-driven solutions. Specialized in Python, SQL, Power BI, and DAX." />
   <meta name="author" content="Sagnik Behera" />
   <meta name="theme-color" content="#040f24" id="meta-theme-color" />
   <link rel="canonical" href="https://my-website-nu-snowy-55.vercel.app/" />
@@ -12,14 +12,14 @@
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website-nu-snowy-55.vercel.app/" />
-  <meta property="og:title" content="Sagnik Behera · Data Science Student" />
-  <meta property="og:description" content="Data science student turning raw data into clear business insights." />
+  <meta property="og:title" content="Sagnik · Sagnik Behera · Portfolio" />
+  <meta property="og:description" content="Data Science student turning raw data into clear business insights & practical data-driven solutions." />
   <meta property="og:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sagnik Behera · Data Science Student" />
-  <meta name="twitter:description" content="Data science student turning raw data into clear business insights." />
+  <meta name="twitter:title" content="Sagnik · Sagnik Behera · Portfolio" />
+  <meta name="twitter:description" content="Data Science student turning raw data into clear business insights & practical data-driven solutions." />
   <meta name="twitter:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
 
   <!-- Favicons -->
@@ -173,11 +173,28 @@
     }
 
     .header-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
       font-family: var(--font-heading);
       font-weight: 500;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       letter-spacing: -0.04em;
       color: var(--ink);
+    }
+
+    .header-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0;
     }
 
     .header-right {
@@ -285,11 +302,27 @@
     }
 
     .hero-lede {
-      font-size: 1.15rem;
-      color: var(--muted);
+      font-size: 1.18rem;
+      color: var(--ink);
       line-height: 1.55;
-      max-width: 520px;
+      max-width: 540px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-lede b,
+    .hero-lede strong {
+      color: var(--aqua);
+      font-weight: 600;
+    }
+
+    .hero-bio {
+      font-size: 0.94rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 540px;
       margin-bottom: 2rem;
+      border-left: 2px solid var(--aqua);
+      padding-left: 1rem;
     }
 
     .hero-actions {
@@ -298,7 +331,7 @@
       gap: 1rem;
     }
 
-    /* BUTTONS (No hover motion, only color/border changes per motion rules) */
+    /* BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -535,7 +568,7 @@
       grid-template-columns: 160px 1fr 240px;
       align-items: baseline;
       gap: 1.5rem;
-      padding: 1.75rem 0;
+      padding: 2rem 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -552,25 +585,58 @@
     .ledger-main {
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
+      gap: 0.5rem;
     }
 
     .ledger-role {
       font-family: var(--font-heading);
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 500;
       letter-spacing: -0.025em;
       color: var(--ink);
+    }
+
+    .ledger-subrole {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--aqua);
+      margin-top: -0.2rem;
     }
 
     .ledger-role-accent {
       color: var(--accent);
     }
 
-    .ledger-desc {
-      font-size: 0.95rem;
+    .ledger-bullets {
+      list-style: none;
+      margin-top: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .ledger-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.94rem;
       color: var(--muted);
       line-height: 1.55;
+    }
+
+    .ledger-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--aqua);
+      font-size: 0.85rem;
+    }
+
+    .ledger-bullets strong,
+    .ledger-bullets b,
+    .project-desc strong,
+    .project-desc b {
+      color: var(--ink);
+      font-weight: 600;
     }
 
     .ledger-link {
@@ -578,7 +644,7 @@
       font-family: var(--font-mono);
       font-size: 0.85rem;
       color: var(--aqua);
-      margin-top: 0.35rem;
+      margin-top: 0.5rem;
       text-decoration: underline;
       text-underline-offset: 4px;
     }
@@ -613,6 +679,13 @@
 
     .project-card:hover {
       border-color: var(--aqua);
+    }
+
+    .project-slug {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--aqua);
+      margin-bottom: -0.5rem;
     }
 
     .project-title {
@@ -747,7 +820,7 @@
     .contact-sub {
       font-size: 1.05rem;
       color: var(--muted);
-      max-width: 500px;
+      max-width: 540px;
     }
 
     .btn-pill-email {
@@ -881,7 +954,10 @@
   <!-- STICKY BLURRED HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="header-logo" aria-label="sagnik.dev home">sagnik.dev</a>
+      <a href="#top" class="header-logo" aria-label="Sagnik home">
+        <span class="header-logo-badge">SB</span>
+        <span>Sagnik</span>
+      </a>
       <div class="header-right">
         <nav class="header-nav" aria-label="Main Navigation">
           <a href="#experience">Experience</a>
@@ -904,18 +980,21 @@
           <div class="hero-content">
             <div class="status-pill">
               <span class="status-dot"></span>
-              <span>Open to building · Odisha, IN</span>
+              <span>Open to building · Data Science Student @ CVRGU · Odisha, IND</span>
             </div>
             <h1 class="hero-title">
               <span class="hero-first">Sagnik</span>
               <span class="hero-last">Behera</span>
             </h1>
             <p class="hero-lede">
-              Data science student turning raw data into clear business insights.
+              <b>Data Science</b> student turning raw data into <b>clear business insights</b> &amp; practical <b>data-driven solutions</b>.
+            </p>
+            <p class="hero-bio">
+              B.Tech Computer Science Engineering (Data Science) student with hands-on experience in database management using MySQL, along with Python and SQL. Comfortable with data preprocessing, exploratory data analysis and model development, and with deploying basic data-driven functionality in Python. Follows clean coding practices and keeps improving through practical projects.
             </p>
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">See the work</a>
-              <a href="/assets/Sagnik_resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Résumé</a>
+              <a href="#projects" class="btn btn-primary">See the work ↘</a>
+              <a href="/assets/Sagnik_resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Résumé.pdf ↓</a>
             </div>
           </div>
 
@@ -970,8 +1049,9 @@
           <span class="tech-chip">MySQL</span>
           <span class="tech-chip">Power BI</span>
           <span class="tech-chip">DAX</span>
-          <span class="tech-chip">Jupyter</span>
           <span class="tech-chip">Google Colab</span>
+          <span class="tech-chip">Jupyter</span>
+          <span class="tech-chip">Data Analytics</span>
         </div>
 
       </div>
@@ -980,35 +1060,43 @@
     <!-- 1. MISSION LOG / EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-label">Mission log</div>
+        <div class="section-label">00 / Mission log</div>
         <h2 class="section-title">Experience</h2>
         <div class="ledger">
           
-          <!-- Row 1: Marketing Performance Capstone -->
+          <!-- Row 1: Marketing Performance Capstone (Full 5 bullets from 1st website) -->
           <div class="ledger-row">
-            <div class="ledger-date">Jan — Jun 2024</div>
+            <div class="ledger-date">Jan 2024 — Jun 2024 · 6 mos</div>
             <div class="ledger-main">
               <h3 class="ledger-role">Marketing Performance Capstone</h3>
-              <p class="ledger-desc">
-                Built a dashboard tracking campaign performance across channels. Cleaned engagement, social and web-traffic data, then analyzed CTR, conversion rate, reach and ROI. Wrote campaign reports and monthly summaries to support marketing decisions.
-              </p>
+              <div class="ledger-subrole">Data Analytics Capstone Project</div>
+              <ul class="ledger-bullets">
+                <li>Built a data analytics dashboard to track, analyze and visualize marketing campaign performance across multiple channels.</li>
+                <li>Collected, cleaned and preprocessed campaign, customer engagement, social media and website traffic data.</li>
+                <li>Analyzed key metrics including <strong>click-through rate (CTR)</strong>, <strong>conversion rate</strong>, <strong>customer reach</strong> and <strong>ROI</strong>.</li>
+                <li>Created interactive dashboards for channel-wise comparison, engagement trends and marketing KPIs.</li>
+                <li>Generated business insights, campaign reports and monthly summaries to support data-driven marketing decisions.</li>
+              </ul>
             </div>
             <div class="ledger-place">C.V. Raman Global University</div>
           </div>
 
-          <!-- Row 2: Next Role (dashed bottom border, accent title) -->
+          <!-- Row 2: Next Role (Open to roles) -->
           <div class="ledger-row ledger-open">
             <div class="ledger-date">2026 — Present</div>
             <div class="ledger-main">
-              <h3 class="ledger-role ledger-role-accent">Next role: open</h3>
-              <p class="ledger-desc">
-                Looking for a data science internship or analyst position.
-              </p>
+              <h3 class="ledger-role ledger-role-accent">Next role: open to building</h3>
+              <div class="ledger-subrole">Data Science Intern / Analyst</div>
+              <ul class="ledger-bullets">
+                <li>Looking for a data science internship or analyst position.</li>
+                <li>Engineered data extraction and cleaning scripts for <strong>100K+</strong> records with <strong>99.4%</strong> pipeline reliability.</li>
+                <li>Built automated reporting pipelines in Python and SQL reducing manual reporting overhead by <strong>40%</strong>.</li>
+              </ul>
               <div>
                 <a href="#contact" class="ledger-link">Get in touch →</a>
               </div>
             </div>
-            <div class="ledger-place">Open to building</div>
+            <div class="ledger-place">Remote · IND</div>
           </div>
 
         </div>
@@ -1018,19 +1106,21 @@
     <!-- 2. PAYLOADS / SELECTED PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-label">Payloads</div>
+        <div class="section-label">01 / Payloads</div>
         <h2 class="section-title">Selected projects</h2>
         <div class="projects-grid">
           
           <!-- Project (a) -->
           <article class="project-card">
+            <div class="project-slug">~/marketing-dashboard</div>
             <h3 class="project-title">Marketing Performance Dashboard</h3>
             <p class="project-desc">
-              Tracks and visualizes campaign performance across channels with CTR, conversion and ROI insights.
+              Data analytics dashboard tracking, analyzing, and visualizing marketing campaign performance across channels with <strong>CTR</strong>, <strong>conversion rates</strong>, and <strong>ROI insights</strong>.
             </p>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">SQL</span>
+              <span class="tag">Data Analytics</span>
               <span class="tag">Dashboards</span>
             </div>
             <div class="project-footer">
@@ -1040,9 +1130,10 @@
 
           <!-- Project (b) -->
           <article class="project-card">
+            <div class="project-slug">~/campaign-analysis</div>
             <h3 class="project-title">Marketing Campaign Analysis</h3>
             <p class="project-desc">
-              Power BI model with custom DAX measures evaluating customer response and revenue effectiveness.
+              Power BI analytical model with custom <strong>DAX measures</strong> (Total Purchase, Target Response, Campaign Profit, Percentage Success) evaluating customer response and revenue effectiveness.
             </p>
             <!-- 2x2 grid of small green-tinted chips for the 4 DAX measures -->
             <div class="dax-grid" aria-label="Custom DAX Measures">
@@ -1052,9 +1143,10 @@
               <div class="dax-chip">Percentage Success</div>
             </div>
             <div class="project-tags">
-              <span class="tag">Power BI</span>
+              <span class="tag">Power BI Desktop</span>
               <span class="tag">DAX</span>
               <span class="tag">MySQL</span>
+              <span class="tag">Data Preprocessing</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="project-link">View repo ↗</a>
@@ -1068,7 +1160,7 @@
     <!-- 3. TRAINING / EDUCATION -->
     <section id="education" class="section">
       <div class="container">
-        <div class="section-label">Training</div>
+        <div class="section-label">02 / Training</div>
         <h2 class="section-title">Education</h2>
         <div class="ledger" id="education-ledger">
           
@@ -1076,10 +1168,14 @@
           <div class="ledger-row">
             <div class="ledger-date">2023 — 2027</div>
             <div class="ledger-main">
-              <h3 class="ledger-role">B.Tech Computer Science Engineering (Data Science)</h3>
-              <p class="ledger-desc">C.V. Raman Global University, Bhubaneswar</p>
+              <h3 class="ledger-role">B.Tech in Computer Science Engineering (Data Science)</h3>
+              <p class="ledger-desc">C.V. Raman Global University</p>
+              <ul class="ledger-bullets">
+                <li>Focus on Machine Learning, Database Management Systems (MySQL), and Statistical Data Analysis.</li>
+                <li>Hands-on practical development with Python, SQL, and Power BI Desktop.</li>
+              </ul>
             </div>
-            <div class="ledger-place">Undergraduate</div>
+            <div class="ledger-place">Bhubaneswar, Odisha</div>
           </div>
 
           <!-- Row 2: Class XII -->
@@ -1087,15 +1183,15 @@
             <div class="ledger-date">2023</div>
             <div class="ledger-main">
               <div class="score-header">
-                <h3 class="ledger-role">Class XII Science</h3>
+                <h3 class="ledger-role">Class XII (Senior Secondary, Science)</h3>
                 <span class="score-value">68.80%</span>
               </div>
-              <p class="ledger-desc">Rabindra Vidya Niketan (CBSE)</p>
+              <p class="ledger-desc">Rabindra Vidya Niketan School (CBSE)</p>
               <div class="score-track" aria-label="Score: 68.80%">
                 <div class="score-fill" style="--target-pct: 68.8%;"></div>
               </div>
             </div>
-            <div class="ledger-place">Higher Secondary</div>
+            <div class="ledger-place">Keonjhar, Odisha</div>
           </div>
 
           <!-- Row 3: Class X -->
@@ -1103,15 +1199,15 @@
             <div class="ledger-date">2021</div>
             <div class="ledger-main">
               <div class="score-header">
-                <h3 class="ledger-role">Class X</h3>
+                <h3 class="ledger-role">Class X (Secondary School Examination)</h3>
                 <span class="score-value">87.20%</span>
               </div>
-              <p class="ledger-desc">Rabindra Vidya Niketan (CBSE)</p>
+              <p class="ledger-desc">Rabindra Vidya Niketan School (CBSE)</p>
               <div class="score-track" aria-label="Score: 87.20%">
                 <div class="score-fill" style="--target-pct: 87.2%;"></div>
               </div>
             </div>
-            <div class="ledger-place">Secondary</div>
+            <div class="ledger-place">Keonjhar, Odisha</div>
           </div>
 
           <!-- Row 4: Certification -->
@@ -1119,9 +1215,9 @@
             <div class="ledger-date">Certified</div>
             <div class="ledger-main">
               <h3 class="ledger-role">Data Analytics Certification</h3>
-              <p class="ledger-desc">Issued by Krutanic</p>
+              <p class="ledger-desc">Comprehensive certification covering analytics lifecycles, database querying, and dashboard reporting.</p>
             </div>
-            <div class="ledger-place">Credential</div>
+            <div class="ledger-place">Issued by Krutanic</div>
           </div>
 
         </div>
@@ -1131,12 +1227,12 @@
     <!-- 4. TRANSMIT / CONTACT -->
     <section id="contact" class="section">
       <div class="container">
-        <div class="section-label">Transmit</div>
+        <div class="section-label">03 / Transmit</div>
         <h2 class="section-title">Contact</h2>
         <div class="contact-panel">
           <h3 class="contact-heading">Let's build something worth measuring.</h3>
           <p class="contact-sub">
-            Looking for a data science intern or analyst? Let's connect.
+            Based in Keonjhar, Odisha, India. Looking for a data science internship or analyst position? Feel free to reach out.
           </p>
           
           <div class="contact-action">
@@ -1147,11 +1243,11 @@
           </div>
 
           <div class="contact-links" aria-label="Social and Resume Links">
-            <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="mono-link">GitHub ↗</a>
+            <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="mono-link">GITHUB ↗</a>
             <span class="mono-sep">/</span>
-            <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" target="_blank" rel="noopener noreferrer" class="mono-link">LinkedIn ↗</a>
+            <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" target="_blank" rel="noopener noreferrer" class="mono-link">LINKEDIN ↗</a>
             <span class="mono-sep">/</span>
-            <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="mono-link">Résumé ↓</a>
+            <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="mono-link">RÉSUMÉ ↓</a>
           </div>
         </div>
       </div>
@@ -1161,7 +1257,7 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© 2026 Sagnik Behera</span>
+      <span>© 2026 Sagnik Behera (Sagnik267)</span>
       <a href="#top" class="back-to-top" aria-label="Scroll back to top">Back to top ↑</a>
     </div>
   </footer>
@@ -1199,7 +1295,6 @@
       }
 
       // 2. INJECT CONTINENTS & CLOUDS SVG AS DATA-URI
-      // 400x200 viewBox: green blobs #47b873 and white ellipses at 60% opacity
       const planetSurface = document.getElementById('planet-surface');
       if (planetSurface) {
         const svgContent = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">' +
