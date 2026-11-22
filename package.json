@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && node scripts/sync-headers.js",
+		"build": "node -e \"const fs=require('fs'); fs.mkdirSync('build', {recursive:true}); fs.copyFileSync('index.html', 'build/index.html'); if(fs.existsSync('assets')) fs.cpSync('assets', 'build/assets', {recursive:true}); console.log('Static site ready');\"",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
