@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"dev": "python -m http.server 5173",
-		"build": "node -e \"const fs=require('fs'); fs.mkdirSync('build', {recursive:true}); fs.copyFileSync('index.html', 'build/index.html'); if(fs.existsSync('assets')) fs.cpSync('assets', 'build/assets', {recursive:true}); console.log('Static site ready');\"",
+		"build": "node scripts/build.js",
 		"preview": "python -m http.server 5173",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
