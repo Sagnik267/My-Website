@@ -1021,6 +1021,147 @@
       color: var(--aqua);
     }
 
+    /* CUSTOM MOON CURSOR STYLES */
+    @media (hover: hover) and (pointer: fine) {
+      html, body, a, button, [role="button"], input[type="submit"], input[type="button"], .btn {
+        cursor: none;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    [contenteditable="true"] {
+      cursor: auto !important;
+    }
+
+    .moon-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      will-change: transform;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .moon-scale-wrap {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .moon-body {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      background:
+        radial-gradient(circle 3px at 60% 62%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
+        radial-gradient(circle 2.5px at 30% 66%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
+        radial-gradient(circle 2px at 68% 28%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
+        radial-gradient(circle at 35% 30%, #ffffff, #dfe8f5 55%, #aab9d1 100%);
+      box-shadow: 0 0 18px 2px rgba(220, 235, 255, 0.55);
+      transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.5s ease;
+    }
+
+    .moon-cover {
+      position: absolute;
+      top: -28%;
+      left: 28%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--bg);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, background 0.5s ease;
+    }
+
+    [data-m="day"] .moon-body {
+      background:
+        radial-gradient(circle 3px at 60% 62%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
+        radial-gradient(circle 2.5px at 30% 66%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
+        radial-gradient(circle 2px at 68% 28%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
+        radial-gradient(circle at 35% 30%, #f4f8ff, #dfe8f5 55%, #9fb4d6 100%);
+      border: 1px solid rgba(23, 105, 224, 0.35);
+      box-shadow: 0 0 14px 1px rgba(23, 105, 224, 0.25);
+    }
+
+    .moon-cursor.is-hover .moon-scale-wrap {
+      transform: scale(1.5);
+    }
+
+    .moon-cursor.is-hover .moon-body {
+      box-shadow: 0 0 28px 6px rgba(220, 235, 255, 0.85);
+    }
+
+    [data-m="day"] .moon-cursor.is-hover .moon-body {
+      box-shadow: 0 0 26px 4px rgba(23, 105, 224, 0.45);
+    }
+
+    .moon-cursor.is-hover .moon-cover {
+      transform: translate(120%, -120%);
+      opacity: 0;
+    }
+
+    .moon-cursor.is-down .moon-scale-wrap {
+      transform: scale(0.85);
+    }
+
+    .moon-cursor.is-planet .moon-body {
+      box-shadow: 0 0 24px 4px var(--aqua) !important;
+    }
+
+    .star-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--aqua);
+      box-shadow: 0 0 8px var(--aqua);
+      pointer-events: none;
+      z-index: 10000;
+      will-change: transform;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .stardust-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      overflow: hidden;
+    }
+
+    .stardust {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--aqua);
+      box-shadow: 0 0 6px var(--aqua);
+      pointer-events: none;
+      animation: dustFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes dustFade {
+      0% {
+        opacity: 0.9;
+        transform: translate3d(var(--x), var(--y), 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(var(--x), var(--y), 0) scale(0.2);
+      }
+    }
+
     /* MOTION RULES (Only allowed moments; completely turned off in prefers-reduced-motion) */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1032,6 +1173,15 @@
       }
       .btn:hover, .theme-toggle-btn:hover {
         transform: none !important;
+      }
+      .moon-cursor, .moon-scale-wrap, .moon-body, .moon-cover {
+        transition: none !important;
+      }
+      .moon-scale-wrap {
+        transform: none !important;
+      }
+      .stardust-container {
+        display: none !important;
       }
     }
 
@@ -1579,7 +1729,131 @@
           showEmailBtn.setAttribute('aria-expanded', 'true');
         });
       }
+
+      // 6. CUSTOM MOON CURSOR (Pure CSS, smooth lag, star dot, crescent-to-full hover phase, crater details)
+      const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (hasFinePointer) {
+        const moon = document.getElementById('moon-cursor');
+        const star = document.getElementById('star-dot');
+        const dustContainer = document.getElementById('stardust-container');
+
+        if (moon && star) {
+          let targetX = -100;
+          let targetY = -100;
+          let currentX = -100;
+          let currentY = -100;
+          let isVisible = false;
+          let isHover = false;
+          let isPlanet = false;
+          let isOverText = false;
+          let lastDustTime = 0;
+          let activeDustCount = 0;
+          const maxDust = 12;
+
+          const lerpFactor = prefersReduced ? 1 : 0.2;
+
+          function renderCursor() {
+            if (isVisible && !isOverText) {
+              if (prefersReduced) {
+                currentX = targetX;
+                currentY = targetY;
+              } else {
+                currentX += (targetX - currentX) * lerpFactor;
+                currentY += (targetY - currentY) * lerpFactor;
+              }
+              moon.style.transform = `translate3d(${currentX - 14}px, ${currentY - 14}px, 0)`;
+              star.style.transform = `translate3d(${targetX - 3}px, ${targetY - 3}px, 0)`;
+            }
+            requestAnimationFrame(renderCursor);
+          }
+          requestAnimationFrame(renderCursor);
+
+          function spawnDust(x, y) {
+            if (prefersReduced || !dustContainer || activeDustCount >= maxDust) return;
+            const now = performance.now();
+            if (now - lastDustTime < 40) return;
+            lastDustTime = now;
+
+            activeDustCount++;
+            const dot = document.createElement('div');
+            dot.className = 'stardust';
+            dot.style.setProperty('--x', `${x - 1.5}px`);
+            dot.style.setProperty('--y', `${y - 1.5}px`);
+            dustContainer.appendChild(dot);
+
+            setTimeout(() => {
+              if (dot.parentNode) dot.parentNode.removeChild(dot);
+              activeDustCount = Math.max(0, activeDustCount - 1);
+            }, 600);
+          }
+
+          window.addEventListener('pointermove', function(e) {
+            targetX = e.clientX;
+            targetY = e.clientY;
+
+            if (!isVisible) {
+              isVisible = true;
+              moon.style.opacity = '1';
+              star.style.opacity = '1';
+              currentX = targetX;
+              currentY = targetY;
+            }
+
+            spawnDust(currentX, currentY);
+
+            const target = e.target;
+            const isText = target && (
+              target.tagName === 'INPUT' ||
+              target.tagName === 'TEXTAREA' ||
+              target.isContentEditable
+            );
+
+            if (isText !== isOverText) {
+              isOverText = isText;
+              moon.style.opacity = isOverText ? '0' : '1';
+              star.style.opacity = isOverText ? '0' : '1';
+            }
+
+            const interactive = target && target.closest('a, button, [role="button"], .btn');
+            if (Boolean(interactive) !== isHover) {
+              isHover = Boolean(interactive);
+              moon.classList.toggle('is-hover', isHover);
+            }
+
+            const overPlanet = target && target.closest('#planet-stage, .hero-planet-stage-wrapper');
+            if (Boolean(overPlanet) !== isPlanet) {
+              isPlanet = Boolean(overPlanet);
+              moon.classList.toggle('is-planet', isPlanet);
+            }
+          });
+
+          window.addEventListener('pointerdown', function() {
+            if (prefersReduced) return;
+            moon.classList.add('is-down');
+            setTimeout(function() {
+              moon.classList.remove('is-down');
+            }, 120);
+          });
+
+          document.documentElement.addEventListener('pointerleave', function() {
+            isVisible = false;
+            moon.style.opacity = '0';
+            star.style.opacity = '0';
+          });
+        }
+      }
     })();
   </script>
+
+  <!-- CUSTOM MOON CURSOR ELEMENTS -->
+  <div id="moon-cursor" class="moon-cursor" aria-hidden="true">
+    <div class="moon-scale-wrap">
+      <div class="moon-body">
+        <div class="moon-cover"></div>
+      </div>
+    </div>
+  </div>
+  <div id="star-dot" class="star-dot" aria-hidden="true"></div>
+  <div id="stardust-container" class="stardust-container" aria-hidden="true"></div>
 </body>
 </html>
