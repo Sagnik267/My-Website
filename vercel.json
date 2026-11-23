@@ -30,7 +30,7 @@
 				},
 				{
 					"key": "Content-Security-Policy",
-					"value": "default-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; object-src 'none'; script-src 'self' 'unsafe-inline' 'sha256-V4yiEh8I/DNB3+61ces6T+mLdlkm1CyHTGiMJaNJKCM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; base-uri 'self'; form-action 'none'; upgrade-insecure-requests; frame-ancestors 'none'"
+					"value": "default-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; object-src 'none'; script-src 'self' 'unsafe-inline' 'sha256-+WXQoaVzfEKernY/fqLZWkvaylVhavl+2PtRmNogqyc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; base-uri 'self'; form-action 'none'; upgrade-insecure-requests; frame-ancestors 'none'"
 				}
 			]
 		},

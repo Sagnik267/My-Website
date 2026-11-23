@@ -1,96 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" data-m="night">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Sagnik Behera · Data Science Portfolio</title>
-  <meta name="description" content="Portfolio of Sagnik Behera, a Data Science student turning raw data into clear business insights. Specialized in Python, SQL, Power BI, and DAX." />
-  <meta name="author" content="Sagnik Behera" />
-  <meta name="theme-color" content="#030b1e" id="meta-theme-color" />
-  <link rel="canonical" href="https://my-website-nu-snowy-55.vercel.app/" />
+  <meta name="description" content="Portfolio of Sagnik Behera, a Data Science student turning raw data into clear business insights. Specialized in Python, SQL, Power BI, and DAX.">
+  <meta name="theme-color" content="#030b1e" id="meta-theme-color">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://my-website-nu-snowy-55.vercel.app/" />
-  <meta property="og:title" content="Sagnik Behera · Data Science Portfolio" />
-  <meta property="og:description" content="Turning raw data into clear business insights." />
-  <meta property="og:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sagnik Behera · Data Science Portfolio" />
-  <meta name="twitter:description" content="Turning raw data into clear business insights." />
-  <meta name="twitter:image" content="https://my-website-nu-snowy-55.vercel.app/og.png" />
-
-  <!-- Favicons: Earth / Blue Planet 🌍 -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Google Fonts: Unbounded (500), Instrument Serif (italic), Inter (400, 500, 600), JetBrains Mono (400, 500) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@500&display=swap" rel="stylesheet" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@500&display=swap" rel="stylesheet">
 
   <style>
-    /* CSS VARIABLES: Blue Planet Theme Tokens */
-    :root {
-      --font-heading: 'Unbounded', system-ui, -apple-system, sans-serif;
-      --font-serif: 'Instrument Serif', Georgia, serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+    /* CSS REGISTERED PROPERTY FOR CRESCENT MASK TRANSITION */
+    @property --cut {
+      syntax: '<percentage>';
+      inherits: true;
+      initial-value: 46%;
     }
 
-    /* Night (default) */
-    [data-m="night"] {
+    /* THEME TOKENS: CSS VARIABLES ON [data-m="night"] AND [data-m="day"] */
+    :root, [data-m="night"] {
       --bg: #030b1e;
-      --bg-rgb: 3, 11, 30;
       --ink: #e8f4ff;
       --muted: #8aa9c9;
       --accent: #4aa8ff;
       --aqua: #7cf3e0;
+      --b: #7cf3e0;
       --green: #5ad38a;
       --glass: linear-gradient(150deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-      --border: rgba(143, 196, 255, 0.18);
+      --border: #8fc4ff2e;
       --highlight: rgba(255, 255, 255, 0.12);
       --glow: rgba(74, 168, 255, 0.4);
-      --dax-bg: rgba(90, 211, 138, 0.14);
-      --dax-border: rgba(90, 211, 138, 0.35);
-      --dax-text: #7cf3e0;
-      --btn-primary-bg: linear-gradient(135deg, #4aa8ff, #7cf3e0);
-      --btn-primary-text: #030b1e;
-      --aurora-blue: rgba(74, 168, 255, 0.18);
-      --aurora-violet: rgba(157, 80, 255, 0.14);
-      --aurora-aqua: rgba(124, 243, 224, 0.16);
-      --timeline-node-shadow: rgba(124, 243, 224, 0.6);
+      --aurora-1: rgba(27, 109, 255, 0.27);
+      --aurora-2: rgba(124, 77, 255, 0.2);
+      --aurora-3: rgba(0, 224, 192, 0.13);
+      --font-heading: 'Unbounded', sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
-    /* Day */
     [data-m="day"] {
       --bg: #e6f3ff;
-      --bg-rgb: 230, 243, 255;
       --ink: #0a2342;
       --muted: #4b6a8c;
       --accent: #1769e0;
       --aqua: #0a8f80;
+      --b: #0a8f80;
       --green: #1f8a4c;
       --glass: linear-gradient(150deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
       --border: rgba(23, 105, 224, 0.2);
       --highlight: rgba(255, 255, 255, 0.82);
       --glow: rgba(23, 105, 224, 0.2);
-      --dax-bg: rgba(31, 138, 76, 0.12);
-      --dax-border: rgba(31, 138, 76, 0.35);
-      --dax-text: #1f8a4c;
-      --btn-primary-bg: linear-gradient(135deg, #1769e0, #0a8f80);
-      --btn-primary-text: #ffffff;
-      --aurora-blue: rgba(74, 168, 255, 0.12);
-      --aurora-violet: rgba(175, 120, 255, 0.09);
-      --aurora-aqua: rgba(10, 143, 128, 0.11);
-      --timeline-node-shadow: rgba(10, 143, 128, 0.4);
+      --aurora-1: rgba(122, 184, 255, 0.4);
+      --aurora-2: rgba(195, 178, 255, 0.33);
+      --aurora-3: rgba(159, 240, 229, 0.4);
     }
 
-    /* BASE & RESET */
+    /* GLOBAL RESET */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -99,7 +69,8 @@
 
     html {
       scroll-behavior: smooth;
-      font-size: 16px;
+      background-color: var(--bg);
+      color: var(--ink);
     }
 
     body {
@@ -115,21 +86,29 @@
       transition: background-color 0.5s ease, color 0.5s ease;
     }
 
-    /* BACKGROUND: Aurora on ::before */
-    body::before {
+    /* ROOT WRAPPER DIV WITH BACKGROUND AURORA & STARFIELD */
+    #wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #wrapper::before {
       content: '';
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: -2;
       background:
-        radial-gradient(ellipse 65% 55% at 85% 15%, var(--aurora-blue), transparent 70%),
-        radial-gradient(ellipse 60% 60% at 10% 45%, var(--aurora-violet), transparent 70%),
-        radial-gradient(ellipse 70% 60% at 80% 85%, var(--aurora-aqua), transparent 75%);
+        radial-gradient(ellipse 65% 55% at 85% 15%, var(--aurora-1), transparent 70%),
+        radial-gradient(ellipse 60% 60% at 10% 45%, var(--aurora-2), transparent 70%),
+        radial-gradient(ellipse 70% 60% at 80% 85%, var(--aurora-3), transparent 75%);
       transition: background 0.5s ease;
     }
 
-    /* Night mode star field on body::after */
+    /* NIGHT MODE FAINT STAR FIELD ON BODY::AFTER */
     [data-m="night"] body::after {
       content: '';
       position: fixed;
@@ -150,7 +129,7 @@
       display: none;
     }
 
-    /* GLASS STYLE TOKEN (used for nav, pills, chips, cards, rows, contact panel) */
+    /* GLASS STYLE TOKEN */
     .glass {
       background: var(--glass);
       border: 1px solid var(--border);
@@ -160,135 +139,147 @@
       transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    /* TYPOGRAPHY */
+    h1, h2, h3, .logo {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      letter-spacing: -0.04em;
     }
 
-    /* Visible 3px Aqua Focus Outline */
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--aqua);
+    }
+
+    /* ACCESSIBILITY & FOCUS VISIBLE OUTLINES */
     :focus-visible {
-      outline: 3px solid var(--aqua);
+      outline: 3px solid var(--aqua) !important;
       outline-offset: 3px;
     }
 
+    /* LAYOUT CONTAINERS */
     .container {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 24px;
     }
 
-    /* HEADER: FLOATING PILL, STICKY, CENTERED */
-    .header-wrapper {
+    /* FLOATING STICKY HEADER */
+    .site-header {
       position: sticky;
-      top: 1rem;
+      top: 0;
       z-index: 100;
       width: 100%;
-      padding: 0 1.25rem;
-      padding-top: max(0.5rem, env(safe-area-inset-top));
+      padding-top: max(16px, env(safe-area-inset-top));
+      padding-bottom: 8px;
     }
 
-    .site-header {
-      max-width: 1000px;
-      margin: 0 auto;
-      border-radius: 9999px;
-      padding: 0.65rem 1.4rem;
+    .header-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      border-radius: 9999px;
+      padding: 10px 22px;
+      margin: 0 auto;
+      max-width: 1000px;
     }
 
-    .header-logo {
-      font-family: var(--font-heading);
-      font-weight: 500;
+    .logo {
       font-size: 1.15rem;
-      letter-spacing: -0.04em;
       color: var(--ink);
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
+      text-decoration: none;
+      letter-spacing: -0.035em;
     }
 
     .header-nav {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
     }
 
     .nav-link {
-      font-family: var(--font-body);
-      font-size: 0.92rem;
-      font-weight: 500;
       color: var(--muted);
-      padding: 0.35rem 0.85rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 14px;
       border-radius: 9999px;
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
 
     .nav-link:hover {
       color: var(--ink);
-      background: rgba(255, 255, 255, 0.08);
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    [data-m="day"] .nav-link:hover {
+      background-color: rgba(23, 105, 224, 0.08);
     }
 
     .theme-toggle-btn {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      color: var(--ink);
       background: transparent;
       border: 1px solid var(--border);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 14px;
       border-radius: 9999px;
-      padding: 0.4rem 0.95rem;
       cursor: pointer;
-      box-shadow: inset 0 1px 0 var(--highlight);
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .theme-toggle-btn:hover {
+      background: var(--glass);
       border-color: var(--aqua);
-      color: var(--aqua);
-      transform: translateY(-2px);
     }
 
     /* HERO SECTION */
     .hero-section {
-      padding: 4.5rem 0 3.5rem;
+      padding: 48px 0 64px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
-      gap: 2.5rem;
+      gap: 40px;
     }
 
     .hero-content {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      gap: 20px;
     }
 
-    /* Glass pill with glowing green dot */
-    .status-pill {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--ink);
+      gap: 10px;
+      padding: 6px 16px;
       border-radius: 9999px;
-      padding: 0.4rem 1rem;
-      margin-bottom: 1.75rem;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      width: fit-content;
     }
 
-    .status-dot {
+    .pulse-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -297,24 +288,22 @@
     }
 
     .hero-title {
-      font-family: var(--font-heading);
-      font-weight: 500;
       font-size: clamp(3rem, 8.6vw, 6.8rem);
       line-height: 1;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.25rem;
+      letter-spacing: -0.045em;
       display: flex;
       flex-direction: column;
     }
 
-    .hero-first {
+    .title-line-1 {
       color: var(--ink);
     }
 
-    .hero-last {
+    .title-line-2 {
       background: linear-gradient(135deg, var(--accent) 0%, var(--aqua) 55%, var(--green) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-tagline {
@@ -322,29 +311,28 @@
       font-style: italic;
       font-size: clamp(1.6rem, 3vw, 2.2rem);
       line-height: 1.25;
-      color: var(--ink);
+      color: var(--muted);
       max-width: 21ch;
-      margin-bottom: 2rem;
     }
 
-    .hero-actions {
+    .hero-cta {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 14px;
+      margin-top: 10px;
     }
 
-    /* BUTTONS (Motion rule: 2px button hover lift) */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-body);
-      font-weight: 500;
-      font-size: 0.96rem;
+      gap: 8px;
+      padding: 12px 26px;
       border-radius: 9999px;
-      padding: 0.7rem 1.75rem;
-      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
       text-decoration: none;
+      cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
@@ -353,148 +341,143 @@
     }
 
     .btn-primary {
-      background: var(--btn-primary-bg);
-      color: var(--btn-primary-text);
-      font-weight: 600;
-      box-shadow: 0 0 24px var(--glow);
-      border: 1px solid transparent;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--aqua) 100%);
+      color: #040e24;
+      border: none;
+      box-shadow: 0 6px 20px var(--glow);
     }
 
-    .btn-primary:hover {
-      box-shadow: 0 0 32px var(--glow);
-    }
-
-    .btn-secondary {
+    .btn-glass {
       color: var(--ink);
     }
 
-    .btn-secondary:hover {
+    .btn-glass:hover {
       border-color: var(--aqua);
-      color: var(--aqua);
     }
 
-    /* RIGHT COLUMN: LIVING PLANET STAGE */
-    .hero-planet-stage-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-
-    .planet-stage {
+    /* HERO PLANET STAGE (#hz) */
+    .hero-planet-wrapper {
       position: relative;
-      width: min(100%, 580px);
-      aspect-ratio: 1;
+      width: 100%;
+      max-width: 580px;
+      aspect-ratio: 1 / 1;
       margin: 0 auto;
-    }
-
-    /* Two dashed circular orbits */
-    .orbit {
-      position: absolute;
-      border-radius: 50%;
-      border: 1px dashed var(--border);
-      pointer-events: none;
-    }
-
-    .orbit-outer {
-      inset: 0;
-      animation: spinOrbitCCW 80s linear infinite;
-    }
-
-    .orbit-inner {
-      inset: 13%;
-      animation: spinOrbitCW 46s linear infinite;
-    }
-
-    @keyframes spinOrbitCW {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes spinOrbitCCW {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-
-    /* Seven glowing 14px moons alternating aqua and green */
-    .moon {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-    }
-
-    .moon-aqua {
-      background-color: var(--aqua);
-      box-shadow: 0 0 12px var(--aqua);
-    }
-
-    .moon-green {
-      background-color: var(--green);
-      box-shadow: 0 0 12px var(--green);
-    }
-
-    /* Planet & Ring system (tilted -14deg, centered) */
-    .planet-system {
-      position: absolute;
-      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: rotate(-14deg);
-      pointer-events: none;
     }
 
-    /* Thin Neptune-style ring (6px border, #4aa8ff55, ellipse) */
-    .neptune-ring {
+    .hero-planet-stage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* NEPTUNE STYLE RING: BACK HALF */
+    .planet-ring-back {
       position: absolute;
-      width: 92%;
-      height: 32%;
+      width: 82%;
+      height: 24%;
       border-radius: 50%;
       border: 6px solid rgba(74, 168, 255, 0.35);
-      box-shadow: 0 0 24px var(--glow);
+      transform: rotate(-14deg);
       pointer-events: none;
-    }
-
-    .ring-back {
       z-index: 1;
     }
 
-    .ring-front {
+    /* NEPTUNE STYLE RING: FRONT HALF */
+    .planet-ring-front {
+      position: absolute;
+      width: 82%;
+      height: 24%;
+      border-radius: 50%;
+      border: 6px solid rgba(74, 168, 255, 0.35);
+      transform: rotate(-14deg);
+      pointer-events: none;
       z-index: 6;
       clip-path: inset(50% 0 0 0);
     }
 
-    /* Atmosphere halo (blurred 2px radial-gradient ring around planet) */
-    .planet-atmosphere {
+    /* TWO DASHED ORBITS WITH 7 GLOWING MOONS */
+    .orbit-outer {
       position: absolute;
-      inset: -14%;
+      inset: 0%;
       border-radius: 50%;
-      background: radial-gradient(circle, transparent 48%, rgba(124, 243, 224, 0.33) 60%, rgba(74, 168, 255, 0.22) 75%, transparent 88%);
-      filter: blur(2px);
+      border: 1px dashed var(--border);
       pointer-events: none;
       z-index: 1;
+      animation: orbitRotate 80s linear infinite;
     }
 
-    /* Planet sphere (about 50% of stage, z-index: 3) */
+    .orbit-inner {
+      position: absolute;
+      inset: 13%;
+      border-radius: 50%;
+      border: 1px dashed var(--border);
+      pointer-events: none;
+      z-index: 1;
+      animation: orbitRotateRev 46s linear infinite;
+    }
+
+    @keyframes orbitRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes orbitRotateRev {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    .orbit-moon {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .moon-aqua {
+      background-color: var(--aqua);
+      box-shadow: 0 0 10px var(--aqua);
+    }
+
+    .moon-green {
+      background-color: var(--green);
+      box-shadow: 0 0 10px var(--green);
+    }
+
+    /* PLANET SPHERE CONTAINER (~50% OF STAGE) */
     .planet-sphere {
       position: relative;
       width: 50%;
-      aspect-ratio: 1;
+      height: 50%;
       border-radius: 50%;
+      transform: rotate(-14deg);
       overflow: hidden;
       z-index: 3;
-      background: radial-gradient(circle at 35% 30%, #5fbcff, #1f5fd6 48%, #08236e);
       border: 1.5px solid var(--aqua);
-      box-shadow:
-        0 0 80px var(--glow),
-        inset 8px 8px 24px rgba(124, 243, 224, 0.4),
-        inset -12px -12px 28px rgba(3, 11, 30, 0.85);
-      pointer-events: auto;
-      cursor: crosshair;
+      box-shadow: 0 0 80px var(--glow), inset 0 0 24px rgba(124, 243, 224, 0.4);
+      background: radial-gradient(circle at 35% 30%, #5fbcff, #1f5fd6 48%, #08236e);
+      --lx: 30%;
+      --ly: 28%;
     }
 
-    /* Three stacked horizontally scrolling layers */
+    /* ATMOSPHERE HALO */
+    .atmosphere-halo {
+      position: absolute;
+      inset: -14%;
+      border-radius: 50%;
+      background: radial-gradient(circle, transparent 58%, rgba(124, 243, 224, 0.33) 72%, rgba(74, 168, 255, 0.4) 86%, transparent 100%);
+      filter: blur(2px);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* SCROLLING PLANET LAYERS */
     .planet-layer {
       position: absolute;
       inset: 0;
@@ -504,378 +487,227 @@
       pointer-events: none;
     }
 
-    /* 1. Land (80s linear infinite) */
-    .planet-land {
+    .planet-layer-land {
       z-index: 1;
-      animation: scrollH 80s linear infinite;
+      animation: planetRotate 80s linear infinite;
     }
 
-    /* 2. Clouds (52s, faster) */
-    .planet-clouds {
+    .planet-layer-clouds {
       z-index: 2;
-      animation: scrollH 52s linear infinite;
-      mix-blend-mode: screen;
+      animation: planetRotate 52s linear infinite;
     }
 
-    /* 3. City lights (80s, on top, masked to dark side) */
-    .planet-lights {
+    .planet-layer-lights {
       z-index: 3;
-      animation: scrollH 80s linear infinite;
-      mask-image: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), transparent 38%, black 78%);
+      animation: planetRotate 80s linear infinite;
       -webkit-mask-image: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), transparent 38%, black 78%);
+      mask-image: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), transparent 38%, black 78%);
     }
 
-    @keyframes scrollH {
-      from { background-position: 0 0; }
-      to { background-position: 200% 0; }
+    @keyframes planetRotate {
+      0% { background-position: 0% 0; }
+      100% { background-position: 200% 0; }
     }
 
-    /* Lighting overlays */
-    /* ::before highlight */
+    /* CURSOR-DRIVEN LIGHTING OVERLAYS */
     .planet-sphere::before {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), rgba(255, 255, 255, 0.24) 0%, transparent 30%);
       z-index: 4;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), rgba(255, 255, 255, 0.24), transparent 30%);
+      transition: background 0.15s ease-out;
     }
 
-    /* ::after night shadow */
     .planet-sphere::after {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: 50%;
+      z-index: 5;
       pointer-events: none;
       background: radial-gradient(circle at var(--lx, 30%) var(--ly, 28%), transparent 26%, rgba(1, 7, 20, 0.85) 100%);
-      z-index: 5;
+      transition: background 0.15s ease-out;
     }
 
-    /* Planet Caption */
+    /* CAPTION & SKILLS ROW */
     .planet-caption {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      color: var(--muted);
       text-align: center;
-      margin-top: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-top: 16px;
     }
 
-    /* TECH CHIPS ROW */
-    .tech-chips-row {
+    .skills-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.65rem;
-      margin-top: 2.75rem;
+      gap: 10px;
+      margin-top: 28px;
     }
 
-    .tech-chip {
+    .skill-chip {
+      padding: 8px 18px;
+      border-radius: 9999px;
       font-family: var(--font-mono);
       font-size: 0.82rem;
       letter-spacing: 0.04em;
       color: var(--ink);
-      border-radius: 9999px;
-      padding: 0.45rem 1.15rem;
     }
 
-    /* SECTIONS */
-    .section {
-      padding: 5rem 0;
+    /* SECTION HEADINGS */
+    .section-wrap {
+      padding: 72px 0;
     }
 
-    .section-tag-wrapper {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.45rem;
+    .section-header {
+      margin-bottom: 36px;
     }
 
     .section-tag {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--aqua);
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
     }
 
-    .section-tag-line {
-      display: inline-block;
-      width: 44px;
+    .tag-line {
+      width: 48px;
       height: 2px;
       background: linear-gradient(90deg, var(--aqua), var(--accent), transparent);
-      border-radius: 1px;
     }
 
     .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 500;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       letter-spacing: -0.04em;
       color: var(--ink);
-      margin-bottom: 2.5rem;
     }
 
-    /* GLOWING VERTICAL TIMELINE (Used for Mission Log & Training) */
+    /* TIMELINE STYLES (MISSION LOG & TRAINING) */
     .timeline {
       position: relative;
-      padding-left: 2.5rem;
+      padding-left: 28px;
       display: flex;
       flex-direction: column;
-      gap: 1.75rem;
+      gap: 24px;
     }
 
-    /* 2px gradient line from accent to aqua to transparent */
     .timeline::before {
       content: '';
       position: absolute;
-      top: 1.5rem;
-      bottom: 1.5rem;
-      left: 7px;
+      left: 6px;
+      top: 12px;
+      bottom: 12px;
       width: 2px;
       background: linear-gradient(180deg, var(--accent) 0%, var(--aqua) 60%, transparent 100%);
-      border-radius: 1px;
     }
 
     .timeline-item {
       position: relative;
     }
 
-    /* 14px glowing aqua node on the line */
     .timeline-node {
       position: absolute;
-      top: 1.75rem;
-      left: -2.5rem;
+      left: -28px;
+      top: 24px;
       width: 14px;
       height: 14px;
       border-radius: 50%;
       background-color: var(--aqua);
-      box-shadow: 0 0 10px var(--timeline-node-shadow);
-      z-index: 2;
+      box-shadow: 0 0 10px var(--aqua);
+      transform: translateX(-50%);
     }
 
     .timeline-card {
-      border-radius: 20px;
-      padding: 1.75rem 2rem;
+      border-radius: 18px;
+      padding: 24px 28px;
       display: grid;
-      grid-template-columns: 150px 1fr 220px;
-      align-items: baseline;
-      gap: 1.5rem;
+      grid-template-columns: 140px 1fr auto;
+      gap: 20px;
+      align-items: start;
     }
 
-    .timeline-card.card-dashed {
+    .timeline-card.open-role {
       border-style: dashed;
     }
 
     .timeline-date {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
       color: var(--muted);
+      padding-top: 2px;
     }
 
-    .timeline-main {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .timeline-role {
-      font-family: var(--font-heading);
-      font-size: 1.18rem;
-      font-weight: 500;
-      letter-spacing: -0.03em;
+    .timeline-body h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
       color: var(--ink);
     }
 
-    .timeline-role.role-aqua {
-      color: var(--aqua);
-    }
-
-    .timeline-desc {
+    .timeline-body p {
       font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.55;
-    }
-
-    .timeline-link {
-      display: inline-flex;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
-      color: var(--aqua);
-      margin-top: 0.4rem;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      transition: color 0.2s ease;
-    }
-
-    .timeline-link:hover {
-      color: var(--accent);
     }
 
     .timeline-place {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      font-size: 0.82rem;
       color: var(--muted);
       text-align: right;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
     }
 
-    .company-logo {
-      height: 32px;
-      width: auto;
-      max-width: 140px;
-      object-fit: contain;
-      display: inline-block;
-      vertical-align: middle;
-      border-radius: 4px;
-      filter: drop-shadow(0 2px 8px rgba(74, 168, 255, 0.2));
-    }
-
-    .badge-verified {
+    .timeline-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
-      color: var(--green);
-      font-size: 0.82rem;
-      font-weight: 500;
-    }
-
-    /* 2. PAYLOADS / PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .project-card {
-      position: relative;
-      border-radius: 24px;
-      padding: 2.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      overflow: hidden;
-    }
-
-    /* Soft radial glow in top-right corner */
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 160px;
-      height: 160px;
-      background: radial-gradient(circle at top right, var(--glow), transparent 70%);
-      pointer-events: none;
-    }
-
-    .project-card:hover {
-      border-color: var(--aqua);
-    }
-
-    .project-title {
-      font-family: var(--font-heading);
-      font-size: 1.3rem;
-      font-weight: 500;
-      letter-spacing: -0.035em;
-      color: var(--ink);
-    }
-
-    .project-desc {
-      font-size: 0.96rem;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .dax-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.65rem;
-    }
-
-    .dax-chip {
-      background: var(--dax-bg);
-      border: 1px solid var(--dax-border);
-      color: var(--dax-text);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.02em;
-      padding: 0.45rem 0.65rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: auto;
-    }
-
-    .tag {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      letter-spacing: 0.04em;
-      color: var(--muted);
-      border-radius: 9999px;
-      padding: 0.25rem 0.8rem;
-    }
-
-    .project-footer {
-      padding-top: 0.5rem;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      letter-spacing: 0.04em;
+      gap: 4px;
+      margin-top: 10px;
       color: var(--aqua);
-      transition: color 0.2s ease;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9rem;
     }
 
-    .project-link:hover {
-      color: var(--accent);
+    .timeline-link:hover {
       text-decoration: underline;
     }
 
-    /* 3. TRAINING / EDUCATION SCORE BARS */
-    .score-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .score-value {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--aqua);
-    }
-
-    .score-track {
+    /* EDUCATION PROGRESS BAR */
+    .edu-score-wrap {
+      margin-top: 12px;
       width: 100%;
-      max-width: 440px;
-      height: 4px;
+      max-width: 320px;
+    }
+
+    .edu-score-header {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .edu-progress-track {
+      width: 100%;
+      height: 5px;
+      border-radius: 9999px;
       background: rgba(255, 255, 255, 0.08);
-      border-radius: 2px;
       overflow: hidden;
-      margin-top: 0.65rem;
+    }
+
+    [data-m="day"] .edu-progress-track {
+      background: rgba(23, 105, 224, 0.1);
     }
 
     .score-fill {
       height: 100%;
-      width: var(--target-pct);
+      border-radius: 9999px;
       background: linear-gradient(90deg, var(--accent), var(--aqua));
       transform-origin: left;
       transform: scaleX(0);
@@ -886,29 +718,158 @@
       transform: scaleX(1);
     }
 
-    /* 4. TRANSMIT / CONTACT */
-    .contact-panel {
+    .badge-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: rgba(124, 243, 224, 0.12);
+      border: 1px solid var(--aqua);
+      color: var(--aqua);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      margin-top: 8px;
+    }
+
+    /* PROJECTS CARDS ("PAYLOADS") */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      border-radius: 24px;
+      padding: 32px 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle at 100% 0%, var(--glow), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .project-card:hover {
+      border-color: var(--aqua);
+      transform: translateY(-2px);
+    }
+
+    .project-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-title {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .dax-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dax-chip {
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(90, 211, 138, 0.12);
+      border: 1px solid rgba(90, 211, 138, 0.3);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--green);
+      text-align: center;
+    }
+
+    .project-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .mini-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+    }
+
+    .repo-link {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--aqua);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .repo-link:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTACT SECTION ("TRANSMIT") */
+    .contact-card {
       position: relative;
       border-radius: 34px;
-      padding: 4.5rem 2rem 4rem;
+      padding: 64px 48px;
       text-align: center;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.75rem;
-      overflow: hidden;
+      gap: 28px;
     }
 
-    /* Glowing planet horizon curving along bottom edge */
-    .contact-horizon {
+    /* GLOWING PLANET HORIZON CURVING ALONG BOTTOM EDGE */
+    .contact-card::after {
+      content: '';
       position: absolute;
-      bottom: -90px;
       left: 50%;
-      transform: translateX(-50%);
+      bottom: -160px;
       width: 140%;
-      height: 190px;
+      height: 240px;
+      transform: translateX(-50%);
       border-radius: 50%;
-      background: radial-gradient(ellipse at 50% 30%, rgba(124, 243, 224, 0.45) 0%, rgba(74, 168, 255, 0.32) 45%, rgba(8, 35, 110, 0.8) 85%);
+      background: radial-gradient(ellipse at center, rgba(124, 243, 224, 0.3) 0%, rgba(74, 168, 255, 0.25) 35%, rgba(8, 35, 110, 0.4) 65%, transparent 80%);
       filter: blur(28px);
       pointer-events: none;
       z-index: 0;
@@ -917,93 +878,70 @@
     .contact-inner {
       position: relative;
       z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      max-width: 640px;
     }
 
     .contact-heading {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4.4vw, 3rem);
-      font-weight: 500;
-      letter-spacing: -0.04em;
-      color: var(--ink);
-      max-width: 720px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
       line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--ink);
     }
 
-    /* "something" in italic Instrument Serif with gradient */
-    .accent-word {
+    .contact-heading em {
       font-family: var(--font-serif);
       font-style: italic;
       font-weight: 400;
       background: linear-gradient(135deg, var(--accent) 0%, var(--aqua) 55%, var(--green) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      padding: 0 0.15em;
+      background-clip: text;
     }
 
-    .contact-sub {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    .btn-pill-email {
-      background: var(--btn-primary-bg);
-      color: var(--btn-primary-text);
-      font-weight: 600;
-      font-family: var(--font-mono);
-      font-size: 0.92rem;
-      letter-spacing: 0.05em;
-      padding: 0.8rem 2.2rem;
-      box-shadow: 0 0 24px var(--glow);
-      border: 1px solid transparent;
-      cursor: pointer;
+    .email-action-wrap {
+      margin-top: 10px;
+      margin-bottom: 24px;
     }
 
     .email-link-revealed {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 1.15rem;
-      letter-spacing: 0.03em;
-      color: var(--aqua);
-      border-radius: 9999px;
-      padding: 0.8rem 2.2rem;
-      text-decoration: none;
-    }
-
-    .contact-links {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 1.25rem;
-      margin-top: 1rem;
-    }
-
-    .mono-link {
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 9999px;
       font-family: var(--font-mono);
-      font-size: 0.88rem;
-      letter-spacing: 0.09em;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .mono-link:hover {
+      font-size: 0.95rem;
       color: var(--aqua);
+      text-decoration: none;
+      border-color: var(--aqua);
     }
 
-    .mono-sep {
-      color: var(--border);
+    .contact-social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .social-link {
       font-family: var(--font-mono);
       font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .social-link:hover {
+      color: var(--ink);
+      border-color: var(--aqua);
     }
 
     /* FOOTER */
     .site-footer {
-      border-top: 1px solid var(--border);
-      padding: 2.25rem 0;
+      padding: 32px 0 48px;
       margin-top: auto;
     }
 
@@ -1012,172 +950,133 @@
       align-items: center;
       justify-content: space-between;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      font-size: 0.82rem;
       color: var(--muted);
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
     }
 
     .footer-inner a:hover {
       color: var(--aqua);
     }
 
-    /* CUSTOM MOON CURSOR STYLES */
-    html.has-moon-cursor,
-    html.has-moon-cursor body,
-    html.has-moon-cursor a,
-    html.has-moon-cursor button,
-    html.has-moon-cursor [role="button"],
-    html.has-moon-cursor input[type="submit"],
-    html.has-moon-cursor input[type="button"],
-    html.has-moon-cursor .btn,
-    html.has-moon-cursor .theme-toggle-btn,
-    html.has-moon-cursor .contact-copy-btn,
-    html.has-moon-cursor .hero-planet-stage,
-    html.has-moon-cursor * {
+    /* MOON CURSOR (DESKTOP ONLY) */
+    html.mc, html.mc body, html.mc * {
       cursor: none !important;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-      html, body, a, button, [role="button"], input[type="submit"], input[type="button"], .btn {
-        cursor: none;
-      }
-    }
-
-    html.has-moon-cursor input[type="text"],
-    html.has-moon-cursor input[type="email"],
-    html.has-moon-cursor input[type="search"],
-    html.has-moon-cursor input[type="password"],
-    html.has-moon-cursor input[type="number"],
-    html.has-moon-cursor textarea,
-    html.has-moon-cursor [contenteditable="true"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="password"],
-    input[type="number"],
-    textarea,
-    [contenteditable="true"] {
+    html.mc input,
+    html.mc textarea,
+    html.mc select,
+    html.mc [contenteditable="true"] {
       cursor: auto !important;
     }
 
-    .moon-cursor {
+    .moon {
       position: fixed;
       top: 0;
       left: 0;
+      width: 30px;
+      height: 30px;
+      margin: -15px 0 0 -15px;
       pointer-events: none;
-      z-index: 99999;
-      will-change: transform;
+      z-index: 9999;
       opacity: 0;
-      transition: opacity 0.25s ease;
+      will-change: transform;
+      filter: drop-shadow(0 0 7px #dcebffaa);
+      transition: opacity 0.25s ease, filter 0.25s ease;
     }
 
-    .moon-scale-wrap {
-      width: 28px;
-      height: 28px;
-      transform-origin: center center;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    .moon.sky {
+      filter: drop-shadow(0 0 11px #7cf3e0dd) !important;
     }
 
-    .moon-body {
-      position: relative;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      overflow: hidden;
-      background:
-        radial-gradient(circle 3px at 60% 62%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
-        radial-gradient(circle 2.5px at 30% 66%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
-        radial-gradient(circle 2px at 68% 28%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
-        radial-gradient(circle at 35% 30%, #ffffff, #dfe8f5 55%, #aab9d1 100%);
-      box-shadow: 0 0 18px 2px rgba(220, 235, 255, 0.55);
-      -webkit-mask-image: radial-gradient(circle 14px at 22px 6px, transparent 13px, #000 13.5px);
-      mask-image: radial-gradient(circle 14px at 22px 6px, transparent 13px, #000 13.5px);
-      transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.5s ease;
+    .moon.hov {
+      filter: drop-shadow(0 0 15px #dcebffdd);
     }
 
-    .moon-cover {
-      position: absolute;
-      top: -28%;
-      left: 28%;
+    [data-m="day"] .moon {
+      filter: drop-shadow(0 0 6px rgba(23, 105, 224, 0.47));
+    }
+
+    [data-m="day"] .moon.sky {
+      filter: drop-shadow(0 0 11px #0a8f80dd) !important;
+    }
+
+    [data-m="day"] .moon.hov {
+      filter: drop-shadow(0 0 14px rgba(23, 105, 224, 0.7));
+    }
+
+    .mb {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background: var(--bg);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, background 0.5s ease;
-    }
-
-    [data-m="day"] .moon-body {
+      --cut: 46%;
       background:
-        radial-gradient(circle 3px at 60% 62%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
-        radial-gradient(circle 2.5px at 30% 66%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
-        radial-gradient(circle 2px at 68% 28%, rgba(23, 105, 224, 0.22) 90%, transparent 100%),
-        radial-gradient(circle at 35% 30%, #f4f8ff, #dfe8f5 55%, #9fb4d6 100%);
-      border: 1px solid rgba(23, 105, 224, 0.35);
-      box-shadow: 0 0 14px 1px rgba(23, 105, 224, 0.25);
+        radial-gradient(circle 3.2px at 60% 62%, rgba(120, 137, 168, 0.35) 90%, transparent 100%),
+        radial-gradient(circle 2.6px at 30% 66%, rgba(120, 137, 168, 0.35) 90%, transparent 100%),
+        radial-gradient(circle 2.2px at 68% 28%, rgba(120, 137, 168, 0.35) 90%, transparent 100%),
+        radial-gradient(circle at 35% 30%, #ffffff, #dfe8f5 55%, #aab9d1 100%);
+      -webkit-mask-image: radial-gradient(circle at 76% 24%, transparent var(--cut), #000 calc(var(--cut) + 1.5%));
+      mask-image: radial-gradient(circle at 76% 24%, transparent var(--cut), #000 calc(var(--cut) + 1.5%));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), --cut 0.3s ease;
     }
 
-    .moon-cursor.is-hover .moon-scale-wrap {
+    [data-m="day"] .mb {
+      background:
+        radial-gradient(circle 3.2px at 60% 62%, rgba(74, 95, 133, 0.4) 90%, transparent 100%),
+        radial-gradient(circle 2.6px at 30% 66%, rgba(74, 95, 133, 0.4) 90%, transparent 100%),
+        radial-gradient(circle 2.2px at 68% 28%, rgba(74, 95, 133, 0.4) 90%, transparent 100%),
+        radial-gradient(circle at 35% 30%, #f4f8ff, #b8c9e4 60%, #8aa2c8 100%);
+    }
+
+    .moon.hov .mb {
+      --cut: 0%;
       transform: scale(1.5);
     }
 
-    .moon-cursor.is-hover .moon-body {
-      box-shadow: 0 0 28px 6px rgba(220, 235, 255, 0.85);
-      -webkit-mask-image: none;
-      mask-image: none;
-    }
-
-    [data-m="day"] .moon-cursor.is-hover .moon-body {
-      box-shadow: 0 0 26px 4px rgba(23, 105, 224, 0.45);
-    }
-
-    .moon-cursor.is-hover .moon-cover {
-      transform: translate(120%, -120%);
-      opacity: 0;
-    }
-
-    .moon-cursor.is-down .moon-scale-wrap {
+    .moon.dn .mb {
       transform: scale(0.85);
     }
 
-    .moon-cursor.is-planet .moon-body {
-      box-shadow: 0 0 24px 4px var(--aqua) !important;
-    }
-
-    .star-dot {
+    .dot {
       position: fixed;
       top: 0;
       left: 0;
       width: 6px;
       height: 6px;
+      margin: -3px 0 0 -3px;
       border-radius: 50%;
-      background: var(--aqua);
-      box-shadow: 0 0 8px var(--aqua);
+      background: var(--b);
+      box-shadow: 0 0 8px var(--b);
       pointer-events: none;
-      z-index: 100000;
-      will-change: transform;
+      z-index: 10000;
       opacity: 0;
+      will-change: transform;
       transition: opacity 0.2s ease;
     }
 
-    .stardust-container {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 99998;
-      overflow: hidden;
-    }
-
     .stardust {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 3px;
       height: 3px;
+      margin: -1.5px 0 0 -1.5px;
       border-radius: 50%;
-      background: var(--aqua);
-      box-shadow: 0 0 6px var(--aqua);
+      background: var(--b);
+      box-shadow: 0 0 6px var(--b);
       pointer-events: none;
+      z-index: 9998;
       animation: dustFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    [data-m="day"] .stardust {
+      background: #1769e0;
+      box-shadow: none;
     }
 
     @keyframes dustFade {
@@ -1187,7 +1086,7 @@
       }
       100% {
         opacity: 0;
-        transform: translate3d(var(--x), var(--y), 0) scale(0.2);
+        transform: translate3d(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy)), 0) scale(0.2);
       }
     }
 
@@ -1200,16 +1099,13 @@
       .score-fill {
         transform: scaleX(1) !important;
       }
-      .btn:hover, .theme-toggle-btn:hover {
+      .btn:hover {
         transform: none !important;
       }
-      .moon-cursor, .moon-scale-wrap, .moon-body, .moon-cover {
+      .moon, .mb {
         transition: none !important;
       }
-      .moon-scale-wrap {
-        transform: none !important;
-      }
-      .stardust-container {
+      .stardust {
         display: none !important;
       }
     }
@@ -1218,402 +1114,363 @@
     @media (max-width: 860px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 36px;
       }
-      .hero-planet-stage-wrapper {
-        order: -1;
+      .hero-content {
+        order: 1;
       }
-      .planet-stage {
-        max-width: 420px;
+      .hero-planet-wrapper {
+        order: 2;
+        max-width: 440px;
       }
       .timeline-card {
         grid-template-columns: 1fr;
-        gap: 0.6rem;
+        gap: 12px;
       }
       .timeline-place {
         text-align: left;
-        justify-content: flex-start;
       }
     }
 
-    /* Screen under 520px: show only Contact and toggle in header */
     @media (max-width: 520px) {
-      .nav-link-hide-mobile {
+      .nav-links li:not(:last-child) {
         display: none;
       }
-      .contact-links {
-        flex-direction: column;
-        gap: 0.75rem;
+      .contact-card {
+        padding: 44px 20px;
       }
-      .mono-sep {
-        display: none;
-      }
-      .dax-grid {
-        grid-template-columns: 1fr;
+      .header-bar {
+        padding: 8px 16px;
       }
     }
   </style>
 </head>
-<body id="top">
-
-  <!-- FLOATING PILL STICKY HEADER -->
-  <div class="header-wrapper">
-    <header class="site-header glass">
-      <a href="#top" class="header-logo" aria-label="sagnik.dev home">sagnik.dev</a>
-      <div class="header-right">
-        <nav class="header-nav" aria-label="Main Navigation">
-          <a href="#work" class="nav-link nav-link-hide-mobile">Work</a>
-          <a href="#projects" class="nav-link nav-link-hide-mobile">Projects</a>
-          <a href="#education" class="nav-link nav-link-hide-mobile">Education</a>
-          <a href="#contact" class="nav-link">Contact</a>
+<body data-m="night">
+  <div id="wrapper" data-m="night">
+    <!-- HEADER -->
+    <header class="site-header" id="top">
+      <div class="header-bar glass">
+        <a href="#top" class="logo">sagnik.dev</a>
+        <nav class="header-nav">
+          <ul class="nav-links">
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-pressed="false" aria-label="Toggle visual theme">Day view</button>
         </nav>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle visual theme" aria-pressed="false">Day view</button>
       </div>
     </header>
-  </div>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          
-          <!-- LEFT COLUMN -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="hero-section">
+        <div class="container hero-grid">
           <div class="hero-content">
-            <div class="status-pill glass">
-              <span class="status-dot"></span>
+            <div class="hero-badge glass">
+              <span class="pulse-dot"></span>
               <span>Open to building · Odisha, IN</span>
             </div>
             <h1 class="hero-title">
-              <span class="hero-first">Sagnik</span>
-              <span class="hero-last">Behera</span>
+              <span class="title-line-1">Sagnik</span>
+              <span class="title-line-2">Behera</span>
             </h1>
-            <p class="hero-tagline">
-              Turning raw data into clear business insights.
-            </p>
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">See the work</a>
-              <a href="/assets/Sagnik_resume.pdf" class="btn btn-secondary glass" target="_blank" rel="noopener noreferrer">Résumé ↓</a>
+            <p class="hero-tagline">Turning raw data into clear business insights.</p>
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary">See the work</a>
+              <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-glass glass">Résumé ↓</a>
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: LIVING PLANET STAGE -->
-          <div class="hero-planet-stage-wrapper">
-            <div class="planet-stage" id="planet-stage" aria-hidden="true">
-              
-              <!-- Outer Orbit (inset 0, rotating 80s CCW) with 4 moons -->
-              <div class="orbit orbit-outer">
-                <span class="moon moon-aqua" style="top: calc(50% - 7px); left: calc(100% - 7px);"></span>
-                <span class="moon moon-green" style="top: -7px; left: calc(50% - 7px);"></span>
-                <span class="moon moon-aqua" style="top: calc(50% - 7px); left: -7px;"></span>
-                <span class="moon moon-green" style="top: calc(100% - 7px); left: calc(50% - 7px);"></span>
+          <div class="hero-planet-wrapper">
+            <div class="hero-planet-stage" id="hz" aria-hidden="true">
+              <!-- Two dashed orbits with 7 moons -->
+              <div class="orbit-outer">
+                <div class="orbit-moon moon-aqua" style="top: 0%; left: 50%;"></div>
+                <div class="orbit-moon moon-green" style="top: 60%; left: 98%;"></div>
+                <div class="orbit-moon moon-aqua" style="top: 90%; left: 22%;"></div>
+                <div class="orbit-moon moon-green" style="top: 35%; left: 2%;"></div>
+              </div>
+              <div class="orbit-inner">
+                <div class="orbit-moon moon-aqua" style="top: 8%; left: 20%;"></div>
+                <div class="orbit-moon moon-green" style="top: 15%; left: 85%;"></div>
+                <div class="orbit-moon moon-aqua" style="top: 85%; left: 70%;"></div>
               </div>
 
-              <!-- Inner Orbit (inset 13%, rotating 46s CW) with 3 moons -->
-              <div class="orbit orbit-inner">
-                <span class="moon moon-green" style="top: calc(15% - 7px); left: calc(15% - 7px);"></span>
-                <span class="moon moon-aqua" style="top: calc(15% - 7px); left: calc(85% - 7px);"></span>
-                <span class="moon moon-green" style="top: calc(90% - 7px); left: calc(50% - 7px);"></span>
+              <!-- Neptune style thin ring: back half -->
+              <div class="planet-ring-back"></div>
+
+              <!-- Atmosphere halo -->
+              <div class="atmosphere-halo"></div>
+
+              <!-- Planet sphere (~50% of stage) -->
+              <div class="planet-sphere" id="planet-sphere">
+                <div class="planet-layer planet-layer-land" id="planet-land"></div>
+                <div class="planet-layer planet-layer-clouds" id="planet-clouds"></div>
+                <div class="planet-layer planet-layer-lights" id="planet-lights"></div>
               </div>
 
-              <!-- Planet & Ring System (tilted -14deg, centered) -->
-              <div class="planet-system">
-                <!-- Neptune Ring: Back Half (z-index: 1) -->
-                <div class="neptune-ring ring-back"></div>
+              <!-- Neptune style thin ring: front half clipped -->
+              <div class="planet-ring-front"></div>
+            </div>
+          </div>
+        </div>
 
-                <!-- Planet Sphere (z-index: 3, ~50% of stage) -->
-                <div class="planet-sphere" id="planet-sphere">
-                  <!-- Atmosphere halo blur -->
-                  <div class="planet-atmosphere"></div>
-                  
-                  <!-- Layer 1: Land (80s) -->
-                  <div class="planet-layer planet-land" id="planet-land"></div>
+        <div class="container">
+          <p class="planet-caption">71% of Earth is ocean · Neptune's winds top 2,000 km/h</p>
+          <div class="skills-row">
+            <span class="skill-chip glass">Python</span>
+            <span class="skill-chip glass">SQL</span>
+            <span class="skill-chip glass">MySQL</span>
+            <span class="skill-chip glass">Power BI</span>
+            <span class="skill-chip glass">DAX</span>
+            <span class="skill-chip glass">Jupyter</span>
+            <span class="skill-chip glass">Google Colab</span>
+          </div>
+        </div>
+      </section>
 
-                  <!-- Layer 2: Clouds (52s, faster) -->
-                  <div class="planet-layer planet-clouds" id="planet-clouds"></div>
+      <!-- 1. MISSION LOG / EXPERIENCE -->
+      <section class="section-wrap" id="work">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">
+              <span class="mono-label">Mission log</span>
+              <span class="tag-line"></span>
+            </div>
+            <h2 class="section-title">Experience</h2>
+          </div>
 
-                  <!-- Layer 3: City lights (80s, on top, masked to dark side) -->
-                  <div class="planet-layer planet-lights" id="planet-lights"></div>
+          <div class="timeline">
+            <!-- Row 1 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-date">Jan — Jun 2024</div>
+                <div class="timeline-body">
+                  <h3>Marketing Performance Capstone</h3>
+                  <p>Built a dashboard tracking campaign performance across channels. Cleaned engagement, social and web-traffic data, then analyzed CTR, conversion rate, reach and ROI. Wrote campaign reports and monthly summaries to support marketing decisions.</p>
                 </div>
-
-                <!-- Neptune Ring: Front Half (z-index: 6, clipped to lower half) -->
-                <div class="neptune-ring ring-front"></div>
+                <div class="timeline-place">C.V. Raman Global University</div>
               </div>
+            </article>
 
-            </div>
-
-            <!-- Planet Caption -->
-            <p class="planet-caption">
-              71% of Earth is ocean · Neptune's winds top 2,000 km/h
-            </p>
-          </div>
-
-        </div>
-
-        <!-- ROW OF GLASS PILL CHIPS BELOW HERO -->
-        <div class="tech-chips-row" aria-label="Core technologies">
-          <span class="tech-chip glass">Python</span>
-          <span class="tech-chip glass">SQL</span>
-          <span class="tech-chip glass">MySQL</span>
-          <span class="tech-chip glass">Power BI</span>
-          <span class="tech-chip glass">DAX</span>
-          <span class="tech-chip glass">Jupyter</span>
-          <span class="tech-chip glass">Google Colab</span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 1. MISSION LOG / EXPERIENCE -->
-    <section id="work" class="section">
-      <span id="experience" aria-hidden="true"></span>
-      <div class="container">
-        <div class="section-tag-wrapper">
-          <span class="section-tag">Mission log</span>
-          <span class="section-tag-line"></span>
-        </div>
-        <h2 class="section-title">Experience</h2>
-        
-        <!-- Glowing Vertical Timeline -->
-        <div class="timeline">
-          
-          <!-- Row 1: Marketing Performance Capstone -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass">
-              <div class="timeline-date">September — November 2027</div>
-              <div class="timeline-main">
-                <h3 class="timeline-role">Marketing Performance Capstone</h3>
-                <p class="timeline-desc">
-                  Built a dashboard tracking campaign performance across channels. Cleaned engagement, social and web-traffic data, then analyzed CTR, conversion rate, reach and ROI. Wrote campaign reports and monthly summaries to support marketing decisions.
-                </p>
-              </div>
-              <div class="timeline-place">
-                <img src="/assets/skillorbit.png" alt="SkillOrbit" class="company-logo" width="123" height="42" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2: Next Role (dashed border, aqua title) -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass card-dashed">
-              <div class="timeline-date">2026 — Present</div>
-              <div class="timeline-main">
-                <h3 class="timeline-role role-aqua">Next role: open</h3>
-                <p class="timeline-desc">
-                  Looking for a data science internship or analyst position.
-                </p>
-                <div>
+            <!-- Row 2 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass open-role">
+                <div class="timeline-date">Present</div>
+                <div class="timeline-body">
+                  <h3 style="color: var(--aqua);">Next role: open</h3>
+                  <p>Looking for a data science internship or analyst position.</p>
                   <a href="#contact" class="timeline-link">Get in touch ↘</a>
                 </div>
+                <div class="timeline-place">Remote / On-site</div>
               </div>
-              <div class="timeline-place">Open to roles</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PAYLOADS / SELECTED PROJECTS -->
+      <section class="section-wrap" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">
+              <span class="mono-label">Payloads</span>
+              <span class="tag-line"></span>
             </div>
+            <h2 class="section-title">Selected projects</h2>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. PAYLOADS / SELECTED PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-tag-wrapper">
-          <span class="section-tag">Payloads</span>
-          <span class="section-tag-line"></span>
-        </div>
-        <h2 class="section-title">Selected projects</h2>
-        <div class="projects-grid">
-          
-          <!-- Project (a) -->
-          <article class="project-card glass">
-            <h3 class="project-title">Marketing Performance Dashboard</h3>
-            <p class="project-desc">
-              Tracks and visualizes campaign performance across channels with CTR, conversion and ROI insights.
-            </p>
-            <div class="project-tags">
-              <span class="tag glass">Python</span>
-              <span class="tag glass">SQL</span>
-              <span class="tag glass">Dashboards</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="project-link">View repo ↗</a>
-            </div>
-          </article>
-
-          <!-- Project (b) -->
-          <article class="project-card glass">
-            <h3 class="project-title">Marketing Campaign Analysis</h3>
-            <p class="project-desc">
-              Power BI model with custom DAX measures evaluating customer response and revenue effectiveness.
-            </p>
-            <!-- 2x2 grid of small green-tinted chips for DAX measures -->
-            <div class="dax-grid" aria-label="Custom DAX Measures">
-              <div class="dax-chip">Total Purchase</div>
-              <div class="dax-chip">Target Response</div>
-              <div class="dax-chip">Campaign Profit</div>
-              <div class="dax-chip">Percentage Success</div>
-            </div>
-            <div class="project-tags">
-              <span class="tag glass">Power BI</span>
-              <span class="tag glass">DAX</span>
-              <span class="tag glass">MySQL</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="project-link">View repo ↗</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. TRAINING / EDUCATION -->
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-tag-wrapper">
-          <span class="section-tag">Training</span>
-          <span class="section-tag-line"></span>
-        </div>
-        <h2 class="section-title">Education</h2>
-        
-        <!-- Glowing Vertical Timeline for Education -->
-        <div class="timeline" id="education-timeline">
-          
-          <!-- Row 1: B.Tech -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass">
-              <div class="timeline-date">2023 — 2027</div>
-              <div class="timeline-main">
-                <h3 class="timeline-role">B.Tech Computer Science Engineering (Data Science)</h3>
-                <p class="timeline-desc">C.V. Raman Global University, Bhubaneswar</p>
+          <div class="projects-grid">
+            <!-- Project (a) -->
+            <article class="project-card glass">
+              <div class="project-body">
+                <h3 class="project-title">Marketing Performance Dashboard</h3>
+                <p class="project-desc">Tracks and visualizes campaign performance across channels with CTR, conversion and ROI insights.</p>
               </div>
-              <div class="timeline-place">Undergraduate</div>
-            </div>
-          </div>
-
-          <!-- Row 2: Class XII -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass">
-              <div class="timeline-date">2023</div>
-              <div class="timeline-main">
-                <div class="score-header">
-                  <h3 class="timeline-role">Class XII Science</h3>
-                  <span class="score-value">68.80%</span>
+              <div class="project-footer">
+                <div class="tag-list">
+                  <span class="mini-tag">Python</span>
+                  <span class="mini-tag">SQL</span>
+                  <span class="mini-tag">Dashboards</span>
                 </div>
-                <p class="timeline-desc">Rabindra Vidya Niketan (CBSE)</p>
-                <div class="score-track" aria-label="Score: 68.80%">
-                  <div class="score-fill" style="--target-pct: 68.8%;"></div>
+                <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="repo-link">View repo ↗</a>
+              </div>
+            </article>
+
+            <!-- Project (b) -->
+            <article class="project-card glass">
+              <div class="project-body">
+                <h3 class="project-title">Marketing Campaign Analysis</h3>
+                <p class="project-desc">Power BI model with custom DAX measures evaluating customer response and revenue effectiveness.</p>
+                <div class="dax-grid">
+                  <div class="dax-chip">Total Purchase</div>
+                  <div class="dax-chip">Target Response</div>
+                  <div class="dax-chip">Campaign Profit</div>
+                  <div class="dax-chip">Percentage Success</div>
                 </div>
               </div>
-              <div class="timeline-place">Higher Secondary</div>
-            </div>
-          </div>
-
-          <!-- Row 3: Class X -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass">
-              <div class="timeline-date">2021</div>
-              <div class="timeline-main">
-                <div class="score-header">
-                  <h3 class="timeline-role">Class X</h3>
-                  <span class="score-value">87.20%</span>
+              <div class="project-footer">
+                <div class="tag-list">
+                  <span class="mini-tag">Power BI</span>
+                  <span class="mini-tag">DAX</span>
+                  <span class="mini-tag">MySQL</span>
                 </div>
-                <p class="timeline-desc">Rabindra Vidya Niketan (CBSE)</p>
-                <div class="score-track" aria-label="Score: 87.20%">
-                  <div class="score-fill" style="--target-pct: 87.2%;"></div>
+                <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="repo-link">View repo ↗</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. TRAINING / EDUCATION -->
+      <section class="section-wrap" id="education">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">
+              <span class="mono-label">Training</span>
+              <span class="tag-line"></span>
+            </div>
+            <h2 class="section-title">Education</h2>
+          </div>
+
+          <div class="timeline" id="education-timeline">
+            <!-- Edu 1 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-date">2023 — 2027</div>
+                <div class="timeline-body">
+                  <h3>B.Tech Computer Science Engineering (Data Science)</h3>
+                  <p>Specialization in Data Analytics, Machine Learning & Statistical Computing.</p>
                 </div>
+                <div class="timeline-place">C.V. Raman Global University, Bhubaneswar</div>
               </div>
-              <div class="timeline-place">Secondary</div>
-            </div>
-          </div>
+            </article>
 
-          <!-- Row 4: Certification -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card glass">
-              <div class="timeline-date">Certified</div>
-              <div class="timeline-main">
-                <h3 class="timeline-role">Data Analytics Certification</h3>
-                <p class="timeline-desc">Issued by Krutanic</p>
+            <!-- Edu 2 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-body">
+                  <h3>Class XII Science</h3>
+                  <p>Rabindra Vidya Niketan (CBSE)</p>
+                  <div class="edu-score-wrap">
+                    <div class="edu-score-header">
+                      <span>Score</span>
+                      <span>68.80%</span>
+                    </div>
+                    <div class="edu-progress-track">
+                      <div class="score-fill" style="width: 68.8%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-place">CBSE Board</div>
               </div>
-              <div class="timeline-place">
-                <span class="badge-verified">Verified ✓</span>
-              </div>
-            </div>
-          </div>
+            </article>
 
+            <!-- Edu 3 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-body">
+                  <h3>Class X</h3>
+                  <p>Rabindra Vidya Niketan (CBSE)</p>
+                  <div class="edu-score-wrap">
+                    <div class="edu-score-header">
+                      <span>Score</span>
+                      <span>87.20%</span>
+                    </div>
+                    <div class="edu-progress-track">
+                      <div class="score-fill" style="width: 87.2%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-place">CBSE Board</div>
+              </div>
+            </article>
+
+            <!-- Edu 4 -->
+            <article class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-date">Certified</div>
+                <div class="timeline-body">
+                  <h3>Data Analytics Certification</h3>
+                  <p>Comprehensive hands-on curriculum in Python, SQL, business metrics & visualization.</p>
+                  <span class="badge-verified">Verified ✓</span>
+                </div>
+                <div class="timeline-place">Issued by Krutanic</div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- 4. TRANSMIT / CONTACT -->
+      <section class="section-wrap" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">
+              <span class="mono-label">Transmit</span>
+              <span class="tag-line"></span>
+            </div>
+            <h2 class="section-title">Contact</h2>
+          </div>
+
+          <div class="contact-card glass">
+            <div class="contact-inner">
+              <h3 class="contact-heading">Let's build <em>something</em> worth measuring.</h3>
+              <div class="email-action-wrap">
+                <button id="show-email-btn" class="btn btn-primary" aria-expanded="false">Show my email</button>
+                <div id="email-result" style="display: none;"></div>
+              </div>
+              <div class="contact-social-links">
+                <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="social-link glass">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" target="_blank" rel="noopener noreferrer" class="social-link glass">LinkedIn ↗</a>
+                <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link glass">Résumé ↓</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© 2026 Sagnik Behera</span>
+        <a href="#top" aria-label="Scroll back to top">Back to top ↑</a>
       </div>
-    </section>
+    </footer>
+  </div>
 
-    <!-- 4. TRANSMIT / CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-tag-wrapper">
-          <span class="section-tag">Transmit</span>
-          <span class="section-tag-line"></span>
-        </div>
-        <h2 class="section-title">Contact</h2>
-        
-        <!-- Large glass panel (34px radius) with curving planet horizon -->
-        <div class="contact-panel glass">
-          <div class="contact-horizon"></div>
-          
-          <div class="contact-inner">
-            <h3 class="contact-heading">
-              Let's build <span class="accent-word">something</span> worth measuring.
-            </h3>
-            <p class="contact-sub">
-              Looking for a data science intern or analyst? Let's connect and build something exceptional together.
-            </p>
-            
-            <div class="contact-action">
-              <button id="show-email-btn" class="btn btn-pill-email" aria-expanded="false">
-                Show my email
-              </button>
-              <div id="email-result" style="display: none;"></div>
-            </div>
-
-            <div class="contact-links" aria-label="Social and Resume Links">
-              <a href="https://github.com/Sagnik267" target="_blank" rel="noopener noreferrer" class="mono-link">GITHUB ↗</a>
-              <span class="mono-sep">/</span>
-              <a href="https://www.linkedin.com/in/sagnik-behera-328b60435" target="_blank" rel="noopener noreferrer" class="mono-link">LINKEDIN ↗</a>
-              <span class="mono-sep">/</span>
-              <a href="/assets/Sagnik_resume.pdf" target="_blank" rel="noopener noreferrer" class="mono-link">RÉSUMÉ ↓</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© 2026 Sagnik Behera</span>
-      <a href="#top" class="back-to-top" aria-label="Scroll back to top">Back to top ↑</a>
-    </div>
-  </footer>
+  <!-- MOON CURSOR ELEMENTS (PLACED AFTER MAIN WRAPPER) -->
+  <div class="moon" aria-hidden="true"><div class="mb"></div></div>
+  <div class="dot" aria-hidden="true"></div>
 
   <!-- VANILLA JAVASCRIPT -->
   <script>
     (function() {
-      // 1. THEME MANAGEMENT: Day / Night View Toggle via [data-m]
+      // 1. THEME MANAGEMENT: Day / Night View Toggle via [data-m] on body and wrapper
+      const bodyEl = document.body;
+      const wrapEl = document.getElementById('wrapper');
       const htmlEl = document.documentElement;
       const themeBtn = document.getElementById('theme-toggle');
       const metaTheme = document.getElementById('meta-theme-color');
 
-      // Start in visitor's prefers-color-scheme
       const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
       let currentTheme = systemPrefersLight ? 'day' : 'night';
 
       function applyTheme(theme) {
         currentTheme = theme;
+        bodyEl.setAttribute('data-m', theme);
+        wrapEl.setAttribute('data-m', theme);
         htmlEl.setAttribute('data-m', theme);
         if (themeBtn) {
           themeBtn.textContent = theme === 'night' ? 'Day view' : 'Night view';
@@ -1632,8 +1489,7 @@
         });
       }
 
-      // 2. INJECT 3 STACKED SCROLLING PLANET LAYERS (LAND, CLOUDS, CITY LIGHTS)
-      // Layer 1: Land (four green continent blobs #47b873 + darker patches #2d8f58 at 60%)
+      // 2. INJECT 3 STACKED SCROLLING PLANET LAYERS
       const landEl = document.getElementById('planet-land');
       if (landEl) {
         const landSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">' +
@@ -1643,10 +1499,6 @@
             '<path d="M72,112 Q105,108 128,136 T115,182 T68,172 T50,128 Z" />' +
             '<path d="M205,42 Q255,16 305,38 T355,78 T315,115 T245,95 T205,42 Z" />' +
             '<path d="M255,122 Q295,116 325,140 T305,182 T250,170 Z" />' +
-            '<circle cx="165" cy="85" r="5" />' +
-            '<circle cx="182" cy="116" r="4" />' +
-            '<circle cx="375" cy="118" r="4" />' +
-            '<circle cx="-25" cy="118" r="4" />' +
           '</g>' +
           '<g fill="#2d8f58" fill-opacity="0.6">' +
             '<path d="M15,50 Q45,38 75,48 T105,75 T70,85 Z" />' +
@@ -1659,7 +1511,6 @@
         landEl.style.backgroundImage = 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(landSvg) + '")';
       }
 
-      // Layer 2: Clouds (white ellipses at about 55% opacity)
       const cloudsEl = document.getElementById('planet-clouds');
       if (cloudsEl) {
         const cloudsSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">' +
@@ -1670,36 +1521,32 @@
             '<ellipse cx="55" cy="130" rx="46" ry="7" />' +
             '<ellipse cx="345" cy="150" rx="60" ry="8" />' +
             '<ellipse cx="165" cy="168" rx="75" ry="7" />' +
-            '<path d="M-10,75 Q25,68 65,77 T140,78" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round" fill="none" />' +
-            '<path d="M390,75 Q425,68 465,77 T540,78" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round" fill="none" />' +
-            '<path d="M220,70 Q260,60 305,72 T380,74" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round" fill="none" />' +
           '</g>' +
         '</svg>';
         cloudsEl.style.backgroundImage = 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(cloudsSvg) + '")';
       }
 
-      // Layer 3: City Lights (small amber #ffd27a dots placed on continents)
       const lightsEl = document.getElementById('planet-lights');
       if (lightsEl) {
         const lightsSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">' +
           '<g fill="#ffd27a">' +
-            '<circle cx="35" cy="48" r="1.8" /><circle cx="55" cy="42" r="1.5" /><circle cx="78" cy="55" r="2" /><circle cx="95" cy="65" r="1.6" /><circle cx="65" cy="82" r="1.7" />' +
-            '<circle cx="435" cy="48" r="1.8" /><circle cx="455" cy="42" r="1.5" /><circle cx="478" cy="55" r="2" /><circle cx="495" cy="65" r="1.6" /><circle cx="465" cy="82" r="1.7" />' +
-            '<circle cx="85" cy="122" r="1.6" /><circle cx="108" cy="138" r="2" /><circle cx="95" cy="155" r="1.7" /><circle cx="75" cy="148" r="1.5" />' +
-            '<circle cx="230" cy="46" r="1.8" /><circle cx="255" cy="35" r="2" /><circle cx="280" cy="48" r="1.7" /><circle cx="310" cy="62" r="2.2" /><circle cx="335" cy="78" r="1.6" /><circle cx="285" cy="82" r="1.8" />' +
-            '<circle cx="275" cy="132" r="1.7" /><circle cx="295" cy="142" r="2.1" /><circle cx="310" cy="155" r="1.6" /><circle cx="268" cy="158" r="1.5" />' +
+            '<circle cx="35" cy="48" r="1.8" /><circle cx="55" cy="42" r="1.5" /><circle cx="78" cy="55" r="2" /><circle cx="95" cy="65" r="1.6" />' +
+            '<circle cx="435" cy="48" r="1.8" /><circle cx="455" cy="42" r="1.5" /><circle cx="478" cy="55" r="2" /><circle cx="495" cy="65" r="1.6" />' +
+            '<circle cx="85" cy="122" r="1.6" /><circle cx="108" cy="138" r="2" /><circle cx="95" cy="155" r="1.7" />' +
+            '<circle cx="230" cy="46" r="1.8" /><circle cx="255" cy="35" r="2" /><circle cx="280" cy="48" r="1.7" /><circle cx="310" cy="62" r="2.2" />' +
+            '<circle cx="275" cy="132" r="1.7" /><circle cx="295" cy="142" r="2.1" /><circle cx="310" cy="155" r="1.6" />' +
           '</g>' +
         '</svg>';
         lightsEl.style.backgroundImage = 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(lightsSvg) + '")';
       }
 
-      // 3. CURSOR-DRIVEN LIGHT (Terminator & city lights follow cursor over hero)
-      const heroEl = document.getElementById('hero');
+      // 3. CURSOR-DRIVEN LIGHT OVER HERO PLANET (#hz)
+      const heroSec = document.getElementById('hero-section');
       const planetSphere = document.getElementById('planet-sphere');
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      if (!prefersReduced && heroEl && planetSphere) {
-        heroEl.addEventListener('pointermove', function(e) {
+      if (!prefersReduced && heroSec && planetSphere) {
+        heroSec.addEventListener('pointermove', function(e) {
           const rect = planetSphere.getBoundingClientRect();
           const rawX = ((e.clientX - rect.left) / rect.width) * 100;
           const rawY = ((e.clientY - rect.top) / rect.height) * 100;
@@ -1709,7 +1556,7 @@
           planetSphere.style.setProperty('--ly', ly.toFixed(1) + '%');
         });
 
-        heroEl.addEventListener('pointerleave', function() {
+        heroSec.addEventListener('pointerleave', function() {
           planetSphere.style.setProperty('--lx', '30%');
           planetSphere.style.setProperty('--ly', '28%');
         });
@@ -1759,148 +1606,61 @@
         });
       }
 
-      // 6. CUSTOM MOON CURSOR (Pure CSS, smooth lag, star dot, crescent-to-full hover phase, crater details)
-      const moon = document.getElementById('moon-cursor');
-      const star = document.getElementById('star-dot');
-      const dustContainer = document.getElementById('stardust-container');
+      // 6. MOON CURSOR (DESKTOP ONLY, <60 LINES)
+      const fineMatch = window.matchMedia('(hover:hover) and (pointer:fine)');
+      const anyFine = window.matchMedia('(any-pointer:fine)');
+      if (fineMatch.matches || anyFine.matches) {
+        document.documentElement.classList.add('mc');
+        const moon = document.querySelector('.moon');
+        const dot = document.querySelector('.dot');
+        let mx = -100, my = -100, tx = -100, ty = -100, vis = false, lastDust = 0, dustCount = 0;
+        const lerp = prefersReduced ? 1 : 0.2;
 
-      if (moon && star) {
-        let targetX = -100;
-        let targetY = -100;
-        let currentX = -100;
-        let currentY = -100;
-        let isVisible = false;
-        let isHover = false;
-        let isPlanet = false;
-        let isOverText = false;
-        let lastDustTime = 0;
-        let activeDustCount = 0;
-        const maxDust = 12;
-
-        const lerpFactor = prefersReduced ? 1 : 0.2;
-
-        function renderCursor() {
-          if (isVisible && !isOverText) {
-            if (prefersReduced) {
-              currentX = targetX;
-              currentY = targetY;
-            } else {
-              currentX += (targetX - currentX) * lerpFactor;
-              currentY += (targetY - currentY) * lerpFactor;
-            }
-            moon.style.transform = `translate3d(${currentX - 14}px, ${currentY - 14}px, 0)`;
-            star.style.transform = `translate3d(${targetX - 3}px, ${targetY - 3}px, 0)`;
+        function loop() {
+          if (vis) {
+            mx += (tx - mx) * lerp;
+            my += (ty - my) * lerp;
+            moon.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+            dot.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0)';
           }
-          requestAnimationFrame(renderCursor);
+          requestAnimationFrame(loop);
         }
-        requestAnimationFrame(renderCursor);
+        requestAnimationFrame(loop);
 
-        function spawnDust(x, y) {
-          if (prefersReduced || !dustContainer || activeDustCount >= maxDust) return;
-          const now = performance.now();
-          if (now - lastDustTime < 40) return;
-          lastDustTime = now;
-
-          activeDustCount++;
-          const dot = document.createElement('div');
-          dot.className = 'stardust';
-          dot.style.setProperty('--x', `${x - 1.5}px`);
-          dot.style.setProperty('--y', `${y - 1.5}px`);
-          dustContainer.appendChild(dot);
-
-          setTimeout(() => {
-            if (dot.parentNode) dot.parentNode.removeChild(dot);
-            activeDustCount = Math.max(0, activeDustCount - 1);
-          }, 600);
-        }
-
-        function onPointerMove(e) {
+        window.addEventListener('pointermove', function(e) {
           if (e.pointerType === 'touch') return;
-
-          targetX = e.clientX;
-          targetY = e.clientY;
-
-          if (!isVisible) {
-            isVisible = true;
-            document.documentElement.classList.add('has-moon-cursor');
-            moon.style.opacity = '1';
-            star.style.opacity = '1';
-            currentX = targetX;
-            currentY = targetY;
+          tx = e.clientX; ty = e.clientY;
+          if (!vis) { vis = true; mx = tx; my = ty; moon.style.opacity = '1'; dot.style.opacity = '1'; }
+          if (!prefersReduced && performance.now() - lastDust > 45 && dustCount < 12) {
+            lastDust = performance.now();
+            dustCount++;
+            const d = document.createElement('div');
+            d.className = 'stardust';
+            d.style.setProperty('--x', mx + 'px');
+            d.style.setProperty('--y', my + 'px');
+            d.style.setProperty('--dx', (Math.random() * 20 - 10).toFixed(1) + 'px');
+            d.style.setProperty('--dy', (Math.random() * 20 - 4).toFixed(1) + 'px');
+            document.body.appendChild(d);
+            d.addEventListener('animationend', function() { d.remove(); dustCount = Math.max(0, dustCount - 1); }, { once: true });
           }
-
-          spawnDust(currentX, currentY);
-
-          const target = e.target;
-          const isText = target && (
-            target.tagName === 'INPUT' ||
-            target.tagName === 'TEXTAREA' ||
-            target.isContentEditable
-          );
-
-          if (Boolean(isText) !== isOverText) {
-            isOverText = Boolean(isText);
-            moon.style.opacity = isOverText ? '0' : '1';
-            star.style.opacity = isOverText ? '0' : '1';
-          }
-
-          const interactive = target && target.closest('a, button, [role="button"], .btn, .theme-toggle-btn, .contact-copy-btn');
-          if (Boolean(interactive) !== isHover) {
-            isHover = Boolean(interactive);
-            moon.classList.toggle('is-hover', isHover);
-          }
-
-          const overPlanet = target && target.closest('#planet-stage, .hero-planet-stage-wrapper');
-          if (Boolean(overPlanet) !== isPlanet) {
-            isPlanet = Boolean(overPlanet);
-            moon.classList.toggle('is-planet', isPlanet);
-          }
-        }
-
-        window.addEventListener('pointermove', onPointerMove, { passive: true });
-        window.addEventListener('mousemove', onPointerMove, { passive: true });
+          const t = e.target;
+          moon.classList.toggle('hov', !!t && !!t.closest('a, button, [role="button"], .btn'));
+          moon.classList.toggle('sky', !!t && !!t.closest('#hz'));
+        }, { passive: true });
 
         window.addEventListener('pointerdown', function(e) {
-          if (e.pointerType === 'touch') {
-            document.documentElement.classList.remove('has-moon-cursor');
-            isVisible = false;
-            moon.style.opacity = '0';
-            star.style.opacity = '0';
-            return;
-          }
-          if (prefersReduced) return;
-          moon.classList.add('is-down');
-          setTimeout(function() {
-            moon.classList.remove('is-down');
-          }, 120);
+          if (e.pointerType !== 'touch' && !prefersReduced) moon.classList.add('dn');
         });
-
-        document.documentElement.addEventListener('pointerleave', function(e) {
-          if (!e.relatedTarget && !e.toElement) {
-            isVisible = false;
-            moon.style.opacity = '0';
-            star.style.opacity = '0';
-          }
+        window.addEventListener('pointerup', function() {
+          moon.classList.remove('dn');
         });
-
-        window.addEventListener('blur', function() {
-          isVisible = false;
+        document.addEventListener('mouseleave', function() {
+          vis = false;
           moon.style.opacity = '0';
-          star.style.opacity = '0';
+          dot.style.opacity = '0';
         });
       }
     })();
   </script>
-
-  <!-- CUSTOM MOON CURSOR ELEMENTS -->
-  <div id="moon-cursor" class="moon-cursor" aria-hidden="true">
-    <div class="moon-scale-wrap">
-      <div class="moon-body">
-        <div class="moon-cover"></div>
-      </div>
-    </div>
-  </div>
-  <div id="star-dot" class="star-dot" aria-hidden="true"></div>
-  <div id="stardust-container" class="stardust-container" aria-hidden="true"></div>
 </body>
 </html>
