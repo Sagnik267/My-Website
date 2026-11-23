@@ -1022,12 +1022,34 @@
     }
 
     /* CUSTOM MOON CURSOR STYLES */
+    html.has-moon-cursor,
+    html.has-moon-cursor body,
+    html.has-moon-cursor a,
+    html.has-moon-cursor button,
+    html.has-moon-cursor [role="button"],
+    html.has-moon-cursor input[type="submit"],
+    html.has-moon-cursor input[type="button"],
+    html.has-moon-cursor .btn,
+    html.has-moon-cursor .theme-toggle-btn,
+    html.has-moon-cursor .contact-copy-btn,
+    html.has-moon-cursor .hero-planet-stage,
+    html.has-moon-cursor * {
+      cursor: none !important;
+    }
+
     @media (hover: hover) and (pointer: fine) {
       html, body, a, button, [role="button"], input[type="submit"], input[type="button"], .btn {
         cursor: none;
       }
     }
 
+    html.has-moon-cursor input[type="text"],
+    html.has-moon-cursor input[type="email"],
+    html.has-moon-cursor input[type="search"],
+    html.has-moon-cursor input[type="password"],
+    html.has-moon-cursor input[type="number"],
+    html.has-moon-cursor textarea,
+    html.has-moon-cursor [contenteditable="true"],
     input[type="text"],
     input[type="email"],
     input[type="search"],
@@ -1043,7 +1065,7 @@
       top: 0;
       left: 0;
       pointer-events: none;
-      z-index: 9999;
+      z-index: 99999;
       will-change: transform;
       opacity: 0;
       transition: opacity 0.25s ease;
@@ -1052,6 +1074,7 @@
     .moon-scale-wrap {
       width: 28px;
       height: 28px;
+      transform-origin: center center;
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -1067,6 +1090,8 @@
         radial-gradient(circle 2px at 68% 28%, rgba(120, 140, 170, 0.35) 90%, transparent 100%),
         radial-gradient(circle at 35% 30%, #ffffff, #dfe8f5 55%, #aab9d1 100%);
       box-shadow: 0 0 18px 2px rgba(220, 235, 255, 0.55);
+      -webkit-mask-image: radial-gradient(circle 14px at 22px 6px, transparent 13px, #000 13.5px);
+      mask-image: radial-gradient(circle 14px at 22px 6px, transparent 13px, #000 13.5px);
       transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.5s ease;
     }
 
@@ -1097,6 +1122,8 @@
 
     .moon-cursor.is-hover .moon-body {
       box-shadow: 0 0 28px 6px rgba(220, 235, 255, 0.85);
+      -webkit-mask-image: none;
+      mask-image: none;
     }
 
     [data-m="day"] .moon-cursor.is-hover .moon-body {
@@ -1126,7 +1153,7 @@
       background: var(--aqua);
       box-shadow: 0 0 8px var(--aqua);
       pointer-events: none;
-      z-index: 10000;
+      z-index: 100000;
       will-change: transform;
       opacity: 0;
       transition: opacity 0.2s ease;
@@ -1136,12 +1163,14 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      z-index: 9998;
+      z-index: 99998;
       overflow: hidden;
     }
 
     .stardust {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 3px;
       height: 3px;
       border-radius: 50%;
@@ -1731,116 +1760,134 @@
       }
 
       // 6. CUSTOM MOON CURSOR (Pure CSS, smooth lag, star dot, crescent-to-full hover phase, crater details)
-      const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-      if (hasFinePointer) {
-        const moon = document.getElementById('moon-cursor');
-        const star = document.getElementById('star-dot');
-        const dustContainer = document.getElementById('stardust-container');
+      const moon = document.getElementById('moon-cursor');
+      const star = document.getElementById('star-dot');
+      const dustContainer = document.getElementById('stardust-container');
 
-        if (moon && star) {
-          let targetX = -100;
-          let targetY = -100;
-          let currentX = -100;
-          let currentY = -100;
-          let isVisible = false;
-          let isHover = false;
-          let isPlanet = false;
-          let isOverText = false;
-          let lastDustTime = 0;
-          let activeDustCount = 0;
-          const maxDust = 12;
+      if (moon && star) {
+        let targetX = -100;
+        let targetY = -100;
+        let currentX = -100;
+        let currentY = -100;
+        let isVisible = false;
+        let isHover = false;
+        let isPlanet = false;
+        let isOverText = false;
+        let lastDustTime = 0;
+        let activeDustCount = 0;
+        const maxDust = 12;
 
-          const lerpFactor = prefersReduced ? 1 : 0.2;
+        const lerpFactor = prefersReduced ? 1 : 0.2;
 
-          function renderCursor() {
-            if (isVisible && !isOverText) {
-              if (prefersReduced) {
-                currentX = targetX;
-                currentY = targetY;
-              } else {
-                currentX += (targetX - currentX) * lerpFactor;
-                currentY += (targetY - currentY) * lerpFactor;
-              }
-              moon.style.transform = `translate3d(${currentX - 14}px, ${currentY - 14}px, 0)`;
-              star.style.transform = `translate3d(${targetX - 3}px, ${targetY - 3}px, 0)`;
-            }
-            requestAnimationFrame(renderCursor);
-          }
-          requestAnimationFrame(renderCursor);
-
-          function spawnDust(x, y) {
-            if (prefersReduced || !dustContainer || activeDustCount >= maxDust) return;
-            const now = performance.now();
-            if (now - lastDustTime < 40) return;
-            lastDustTime = now;
-
-            activeDustCount++;
-            const dot = document.createElement('div');
-            dot.className = 'stardust';
-            dot.style.setProperty('--x', `${x - 1.5}px`);
-            dot.style.setProperty('--y', `${y - 1.5}px`);
-            dustContainer.appendChild(dot);
-
-            setTimeout(() => {
-              if (dot.parentNode) dot.parentNode.removeChild(dot);
-              activeDustCount = Math.max(0, activeDustCount - 1);
-            }, 600);
-          }
-
-          window.addEventListener('pointermove', function(e) {
-            targetX = e.clientX;
-            targetY = e.clientY;
-
-            if (!isVisible) {
-              isVisible = true;
-              moon.style.opacity = '1';
-              star.style.opacity = '1';
+        function renderCursor() {
+          if (isVisible && !isOverText) {
+            if (prefersReduced) {
               currentX = targetX;
               currentY = targetY;
+            } else {
+              currentX += (targetX - currentX) * lerpFactor;
+              currentY += (targetY - currentY) * lerpFactor;
             }
+            moon.style.transform = `translate3d(${currentX - 14}px, ${currentY - 14}px, 0)`;
+            star.style.transform = `translate3d(${targetX - 3}px, ${targetY - 3}px, 0)`;
+          }
+          requestAnimationFrame(renderCursor);
+        }
+        requestAnimationFrame(renderCursor);
 
-            spawnDust(currentX, currentY);
+        function spawnDust(x, y) {
+          if (prefersReduced || !dustContainer || activeDustCount >= maxDust) return;
+          const now = performance.now();
+          if (now - lastDustTime < 40) return;
+          lastDustTime = now;
 
-            const target = e.target;
-            const isText = target && (
-              target.tagName === 'INPUT' ||
-              target.tagName === 'TEXTAREA' ||
-              target.isContentEditable
-            );
+          activeDustCount++;
+          const dot = document.createElement('div');
+          dot.className = 'stardust';
+          dot.style.setProperty('--x', `${x - 1.5}px`);
+          dot.style.setProperty('--y', `${y - 1.5}px`);
+          dustContainer.appendChild(dot);
 
-            if (isText !== isOverText) {
-              isOverText = isText;
-              moon.style.opacity = isOverText ? '0' : '1';
-              star.style.opacity = isOverText ? '0' : '1';
-            }
+          setTimeout(() => {
+            if (dot.parentNode) dot.parentNode.removeChild(dot);
+            activeDustCount = Math.max(0, activeDustCount - 1);
+          }, 600);
+        }
 
-            const interactive = target && target.closest('a, button, [role="button"], .btn');
-            if (Boolean(interactive) !== isHover) {
-              isHover = Boolean(interactive);
-              moon.classList.toggle('is-hover', isHover);
-            }
+        function onPointerMove(e) {
+          if (e.pointerType === 'touch') return;
 
-            const overPlanet = target && target.closest('#planet-stage, .hero-planet-stage-wrapper');
-            if (Boolean(overPlanet) !== isPlanet) {
-              isPlanet = Boolean(overPlanet);
-              moon.classList.toggle('is-planet', isPlanet);
-            }
-          });
+          targetX = e.clientX;
+          targetY = e.clientY;
 
-          window.addEventListener('pointerdown', function() {
-            if (prefersReduced) return;
-            moon.classList.add('is-down');
-            setTimeout(function() {
-              moon.classList.remove('is-down');
-            }, 120);
-          });
+          if (!isVisible) {
+            isVisible = true;
+            document.documentElement.classList.add('has-moon-cursor');
+            moon.style.opacity = '1';
+            star.style.opacity = '1';
+            currentX = targetX;
+            currentY = targetY;
+          }
 
-          document.documentElement.addEventListener('pointerleave', function() {
+          spawnDust(currentX, currentY);
+
+          const target = e.target;
+          const isText = target && (
+            target.tagName === 'INPUT' ||
+            target.tagName === 'TEXTAREA' ||
+            target.isContentEditable
+          );
+
+          if (Boolean(isText) !== isOverText) {
+            isOverText = Boolean(isText);
+            moon.style.opacity = isOverText ? '0' : '1';
+            star.style.opacity = isOverText ? '0' : '1';
+          }
+
+          const interactive = target && target.closest('a, button, [role="button"], .btn, .theme-toggle-btn, .contact-copy-btn');
+          if (Boolean(interactive) !== isHover) {
+            isHover = Boolean(interactive);
+            moon.classList.toggle('is-hover', isHover);
+          }
+
+          const overPlanet = target && target.closest('#planet-stage, .hero-planet-stage-wrapper');
+          if (Boolean(overPlanet) !== isPlanet) {
+            isPlanet = Boolean(overPlanet);
+            moon.classList.toggle('is-planet', isPlanet);
+          }
+        }
+
+        window.addEventListener('pointermove', onPointerMove, { passive: true });
+        window.addEventListener('mousemove', onPointerMove, { passive: true });
+
+        window.addEventListener('pointerdown', function(e) {
+          if (e.pointerType === 'touch') {
+            document.documentElement.classList.remove('has-moon-cursor');
             isVisible = false;
             moon.style.opacity = '0';
             star.style.opacity = '0';
-          });
-        }
+            return;
+          }
+          if (prefersReduced) return;
+          moon.classList.add('is-down');
+          setTimeout(function() {
+            moon.classList.remove('is-down');
+          }, 120);
+        });
+
+        document.documentElement.addEventListener('pointerleave', function(e) {
+          if (!e.relatedTarget && !e.toElement) {
+            isVisible = false;
+            moon.style.opacity = '0';
+            star.style.opacity = '0';
+          }
+        });
+
+        window.addEventListener('blur', function() {
+          isVisible = false;
+          moon.style.opacity = '0';
+          star.style.opacity = '0';
+        });
       }
     })();
   </script>
