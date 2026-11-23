@@ -722,6 +722,20 @@
       letter-spacing: 0.04em;
       color: var(--muted);
       text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .company-logo {
+      height: 32px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 4px;
+      filter: drop-shadow(0 2px 8px rgba(74, 168, 255, 0.2));
     }
 
     .badge-verified {
@@ -1039,6 +1053,7 @@
       }
       .timeline-place {
         text-align: left;
+        justify-content: flex-start;
       }
     }
 
@@ -1187,14 +1202,16 @@
           <div class="timeline-item">
             <span class="timeline-node"></span>
             <div class="timeline-card glass">
-              <div class="timeline-date">Jan — Jun 2024</div>
+              <div class="timeline-date">September — November 2027</div>
               <div class="timeline-main">
                 <h3 class="timeline-role">Marketing Performance Capstone</h3>
                 <p class="timeline-desc">
                   Built a dashboard tracking campaign performance across channels. Cleaned engagement, social and web-traffic data, then analyzed CTR, conversion rate, reach and ROI. Wrote campaign reports and monthly summaries to support marketing decisions.
                 </p>
               </div>
-              <div class="timeline-place">C.V. Raman Global University</div>
+              <div class="timeline-place">
+                <img src="/assets/skillorbit.png" alt="SkillOrbit" class="company-logo" width="123" height="42" />
+              </div>
             </div>
           </div>
 
